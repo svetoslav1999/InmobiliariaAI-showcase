@@ -1,0 +1,11 @@
+# Showcase — nunca incluir nada que filtre implementación
+*.env
+.env*
+*.key
+*.pem
+*.zip
+*.tgz
+node_modules/
+__pycache__/
+.DS_Store
+Thumbs.db
