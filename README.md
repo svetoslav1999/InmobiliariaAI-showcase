@@ -62,7 +62,7 @@ Las agencias inmobiliarias pierden operaciones por fricción operativa: leads si
 - **IA comercial** — asistente con memoria, agente de WhatsApp, campañas y generador de anuncios.
 - **Estudio de contenido IA** — home staging, vídeo y mejora de imágenes.
 - **Analytics & automatizaciones** — dashboards y reglas por evento.
-- **Calculadoras financieras** — hipoteca, rentabilidad y amortización con exportación.
+- **Calculadoras financieras** — 5 calculadoras: hipoteca, gastos, rentabilidad, **capacidad de compra** (cualificación del comprador) y **rentabilidad avanzada** (ROI, cash flow, análisis de inversión), con exportación a PDF/CSV.
 - **Backups & cumplimiento** — copias verificadas y herramientas RGPD / AI Act.
 
 ---

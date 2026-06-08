@@ -36,8 +36,10 @@ Descripción funcional orientada a producto. Sin detalles de implementación.
 - Tareas con tablero Kanban.
 
 ## 🧮 Calculadoras financieras
-- Hipoteca, gastos de compra, rentabilidad.
-- Tabla de amortización con exportación.
+- **5 calculadoras** en un módulo: Hipoteca, Gastos de Compraventa, Rentabilidad, Capacidad de Compra y Rentabilidad Avanzada.
+- **Capacidad de Compra** — cualificación financiera del comprador: precio máximo de vivienda, hipoteca máxima, cuota, ratio de endeudamiento y entrada necesaria.
+- **Rentabilidad Avanzada** — análisis de inversión: ROI, cash flow mensual/anual, rentabilidad bruta/neta/apalancada, punto de equilibrio y payback.
+- Tabla de amortización y exportación a **PDF profesional, CSV e impresión** en cada calculadora.
 
 ## 💾 Backups
 - Copia completa, incremental y manual.
