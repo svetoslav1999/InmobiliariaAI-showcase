@@ -50,20 +50,26 @@ Las agencias inmobiliarias pierden operaciones por fricción operativa: leads si
 | 🏡 **Mapas inteligentes** | Miles de propiedades en mapa sin lag, con agrupación dinámica. |
 | 📄 **Contratos PDF premium** | Documentos corporativos listos para cliente. |
 | 🎨 **Home Staging IA** | Amueblado virtual de estancias vacías. |
+| 🔭 **Tour Virtual 360°** | Visor panorámico WebGL con salas conectadas, hotspots y autogeneración procedural. |
 | 📊 **Analytics IA** | KPIs en tiempo real y lectura del pipeline. |
 | ⚡ **Automatizaciones** | Reglas por evento para nutrir leads sin intervención manual. |
+| 🌐 **Multi-portal** | Publicación en portales inmobiliarios con un clic desde la ficha. |
+| 🔄 **Auto-actualización** | Actualizaciones silenciosas sobre la app instalada vía GitHub Releases. |
 | 🌙 **Dark mode enterprise** | Sistema de diseño unificado, contraste accesible. |
 
 ### Módulos principales
 
-- **Propiedades** — listado con filtros avanzados, fotos, mapa inteligente y dossier PDF.
+- **Propiedades** — listado con filtros avanzados, fotos, mapa inteligente, dossier PDF y panel lateral premium (diseño Airbnb/Idealista).
+- **Tour 360°** — visor panorámico WebGL disponible en cada propiedad; salas procedurales cuando no hay fotos reales; hotspots de navegación entre salas; fallback limpio si no hay GPU.
 - **CRM de leads** — pipeline visual con arrastrar y soltar, scoring por IA, historial y visitas.
 - **Agentes** — alta/baja, permisos por rol y métricas reales de rendimiento.
 - **IA comercial** — asistente con memoria, agente de WhatsApp, campañas y generador de anuncios.
 - **Estudio de contenido IA** — home staging, vídeo y mejora de imágenes.
 - **Analytics & automatizaciones** — dashboards y reglas por evento.
-- **Calculadoras financieras** — 5 calculadoras: hipoteca, gastos, rentabilidad, **capacidad de compra** (cualificación del comprador) y **rentabilidad avanzada** (ROI, cash flow, análisis de inversión), con exportación a PDF/CSV.
+- **Calculadoras financieras** — 5 calculadoras: hipoteca, gastos, rentabilidad, **capacidad de compra** y **rentabilidad avanzada** (ROI, cash flow, análisis de inversión) con exportación a PDF/CSV.
+- **Multi-portal** — publicación en portales con un clic desde la ficha del inmueble.
 - **Backups & cumplimiento** — copias verificadas y herramientas RGPD / AI Act.
+- **Auto-actualización** — instalador con canal beta/stable, actualizaciones silenciosas.
 
 ---
 
@@ -101,15 +107,33 @@ Las agencias inmobiliarias pierden operaciones por fricción operativa: leads si
 |---|---|
 | ![Generador de anuncios](screenshots/anuncios.png) | ![Automatizaciones](screenshots/automations.png) |
 
-| WhatsApp Business | Calculadoras |
+| WhatsApp Business | Calculadoras financieras |
 |---|---|
 | ![WhatsApp Business](screenshots/whatsapp.png) | ![Calculadoras](screenshots/calculators.png) |
 
+| Agentes | Visitas |
+|---|---|
+| ![Agentes](screenshots/agents.png) | ![Visitas](screenshots/visits.png) |
+
+| Organización | Configuración |
+|---|---|
+| ![Organización](screenshots/organization.png) | ![Configuración](screenshots/settings.png) |
+
+### FHD / alta resolución
+
+| Dashboard FHD | Propiedades FHD |
+|---|---|
+| ![Dashboard FHD](screenshots/dashboard-fhd.png) | ![Propiedades FHD](screenshots/properties-fhd.png) |
+
 ### Responsive
 
-| Móvil — Dashboard | Tablet — Dashboard |
+| Móvil — Dashboard | Móvil — Propiedades |
 |---|---|
-| ![Móvil](screenshots/mobile-dashboard.png) | ![Tablet](screenshots/tablet-dashboard.png) |
+| ![Móvil Dashboard](screenshots/mobile-dashboard.png) | ![Móvil Propiedades](screenshots/mobile-properties.png) |
+
+| Tablet — Dashboard | Tablet — Propiedades |
+|---|---|
+| ![Tablet Dashboard](screenshots/tablet-dashboard.png) | ![Tablet Propiedades](screenshots/tablet-properties.png) |
 
 ---
 
@@ -148,7 +172,11 @@ Ver [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) y [docs/FEATURES.md](docs/FEATU
 
 ## 🗺️ Roadmap
 
-- [ ] Integraciones con portales inmobiliarios (publicación multi-portal)
+- [x] Tour virtual 360° con visor WebGL y salas procedurales
+- [x] Multi-portal: publicación en portales con un clic
+- [x] Auto-actualización silenciosa (electron-updater, canal beta/stable)
+- [x] Módulo de agentes con métricas reales de rendimiento
+- [x] Calculadora de capacidad de compra y rentabilidad avanzada con ROI/cash flow
 - [ ] App móvil nativa
 - [ ] Firma electrónica de contratos
 - [ ] Marketplace de plantillas de automatización
