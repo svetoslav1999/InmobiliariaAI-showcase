@@ -13,7 +13,7 @@
 [![Security](https://img.shields.io/badge/seguridad-auditada-orange)](#seguridad)
 [![Version](https://img.shields.io/badge/version-v0.8.0-purple)](#estado-del-proyecto)
 
-`IA` · `Multi-tenant` · `Web + Escritorio` · `Dark mode enterprise`
+`IA` · `Multi-tenant` · `SaaS Web` · `Dark mode enterprise`
 
 </div>
 
@@ -26,7 +26,7 @@
 
 ## ¿Qué es InmobilarIA?
 
-**InmobilarIA** es una plataforma inmobiliaria premium —web y escritorio— que convierte la operativa diaria de una agencia en un flujo inteligente y automatizado. No es un CRM más: es un **sistema operativo inmobiliario** que integra inteligencia artificial en cada etapa del negocio, desde la captación del lead hasta la firma del contrato.
+**InmobilarIA** es una plataforma inmobiliaria SaaS premium que convierte la operativa diaria de una agencia en un flujo inteligente y automatizado. No es un CRM más: es un **sistema operativo inmobiliario** que integra inteligencia artificial en cada etapa del negocio, desde la captación del lead hasta la firma del contrato.
 
 Construida como producto **multi-tenant**, cada agencia opera en un espacio totalmente aislado —datos, usuarios, branding y configuración propios.
 
@@ -190,7 +190,7 @@ Los webhooks de WhatsApp se validan con HMAC-SHA256 usando comparación en tiemp
 | Seguridad auditada | **14 rondas · 82/100** ✅ |
 | Build producción | **49 rutas compiladas** ✅ |
 | Versión actual | **v0.8.0** |
-| Distribución | Web · Electron (Windows) |
+| Distribución | SaaS Web · Docker |
 
 ---
 
@@ -208,7 +208,7 @@ Los webhooks de WhatsApp se validan con HMAC-SHA256 usando comparación en tiemp
 ```
 Agentes / Clientes
        ↓
-Frontend Web (Next.js) · App de Escritorio (Electron)
+Frontend Web (Next.js 16)
        ↓
 API de Servicios (FastAPI) · Middleware de Seguridad
        ↓
@@ -228,7 +228,6 @@ Ver [ROADMAP_PUBLIC.md](ROADMAP_PUBLIC.md) para el roadmap completo con priorida
 **Entregado recientemente:**
 - [x] Tour virtual 360° con visor WebGL y salas procedurales
 - [x] Multi-portal: publicación en portales con un clic
-- [x] Auto-actualización silenciosa (electron-updater, canal beta/stable)
 - [x] Módulo de agentes con métricas reales de rendimiento
 - [x] Calculadoras de capacidad de compra y rentabilidad avanzada
 - [x] Hardening de seguridad multi-tenant (v0.8.0)
@@ -268,3 +267,4 @@ Este repositorio tiene como finalidad mostrar las capacidades y funcionalidades 
 © InmobilarIA 2026 · Todos los derechos reservados
 
 </div>
+
