@@ -11,7 +11,7 @@
 [![Tests](https://img.shields.io/badge/tests-151%20passing-brightgreen)](#estado-del-proyecto)
 [![Multi-tenant](https://img.shields.io/badge/multi--tenant-implementado-blue)](#seguridad)
 [![Security](https://img.shields.io/badge/seguridad-auditada-orange)](#seguridad)
-[![Version](https://img.shields.io/badge/version-v0.8.0-purple)](#estado-del-proyecto)
+[![Version](https://img.shields.io/badge/version-v0.9.0-purple)](#estado-del-proyecto)
 
 `IA` · `Multi-tenant` · `SaaS Web` · `Dark mode enterprise`
 
@@ -21,6 +21,18 @@
 
 > ⚠️ **Repositorio de presentación (showcase).** Aquí se muestran las **capacidades y la experiencia** del producto.
 > **No** contiene código fuente, lógica de negocio ni configuración de despliegue.
+
+---
+
+<div align="center">
+
+### ✨ Landing premium — SaaS Web
+
+![InmobilarIA — landing](screenshots/landing-hero.png)
+
+*Captación, cualificación, matching y cierre con IA — presentado a nivel de startup unicornio.*
+
+</div>
 
 ---
 
@@ -106,6 +118,12 @@ Cada agencia opera en un entorno completamente aislado. El aislamiento se implem
 ## Capturas de pantalla
 
 > Capturas reales de la aplicación con **datos de demostración** (sin información personal real).
+
+### Landing pública (SaaS Web)
+
+| Landing completa | Responsive (móvil) |
+|---|---|
+| ![Landing completa](screenshots/landing-full.png) | ![Landing móvil](screenshots/landing-mobile.png) |
 
 ### Panel y analítica
 

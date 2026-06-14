@@ -4,6 +4,23 @@
 
 ---
 
+## v0.9.0 — Junio 2026 · Landing premium pública (SaaS Web)
+
+### Nueva experiencia pública
+- **Landing de clase mundial** — nueva página de inicio con escena 3D en tiempo real (skyline + red inteligente de matching), fondo vivo reactivo al cursor, animaciones al scroll y un diseño premium inspirado en las mejores plataformas SaaS.
+- **Recorrido del producto** — secciones que explican la IA en cada fase comercial (captación, lead scoring, matching, seguimiento, automatización y cierre), métricas animadas, línea de tiempo del proceso y testimonios.
+- **Acceso a la plataforma** — botón directo «Entrar a la Plataforma» y solicitud de demo.
+
+### Experiencia y rendimiento
+- **Totalmente responsive** — perfecto en móvil, tablet, portátil y pantallas grandes.
+- **Accesible** — navegación por teclado, foco visible y respeto de «reducir movimiento».
+- **Optimizada** — efectos 3D que se desactivan en móvil para mantener la fluidez.
+
+### Calidad
+- **151 tests en verde**, 0 errores TypeScript, build de producción limpio.
+
+---
+
 ## v0.8.0 — Junio 2026 · Seguridad y estabilidad
 
 ### Seguridad reforzada
