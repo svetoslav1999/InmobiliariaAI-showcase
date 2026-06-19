@@ -6,21 +6,24 @@
 
 ### El sistema operativo inteligente para inmobiliarias modernas
 
-**CRM inmobiliario premium con IA integrada — captación, gestión, automatización y cierre en una sola plataforma.**
+**CRM inmobiliario premium con IA integrada — captación, gestión, automatización y cierre en una sola plataforma SaaS multi-tenant.**
 
-[![Tests](https://img.shields.io/badge/tests-151%20passing-brightgreen)](#estado-del-proyecto)
-[![Multi-tenant](https://img.shields.io/badge/multi--tenant-implementado-blue)](#seguridad)
-[![Security](https://img.shields.io/badge/seguridad-auditada-orange)](#seguridad)
+[![Tests](https://img.shields.io/badge/tests-151%20backend%20%2B%2032%20frontend-brightgreen)](#estado-del-proyecto)
+[![Multi-tenant](https://img.shields.io/badge/multi--tenant-nivel%20ORM-blue)](#seguridad)
+[![Security](https://img.shields.io/badge/seguridad-14%20rondas%20auditada-orange)](#seguridad)
 [![Version](https://img.shields.io/badge/version-v0.9.0-purple)](#estado-del-proyecto)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black)](#tecnologías)
+[![FastAPI](https://img.shields.io/badge/FastAPI-Python%203.12-009688)](#tecnologías)
+[![Claude](https://img.shields.io/badge/IA-Claude%20(Anthropic)-d97757)](#ai-center--11-módulos-de-inteligencia-artificial)
 
-`IA` · `Multi-tenant` · `SaaS Web` · `Dark mode enterprise`
+`IA` · `Multi-tenant` · `SaaS Web` · `Dark mode enterprise` · `42 routers · 200+ endpoints`
 
 </div>
 
 ---
 
-> ⚠️ **Repositorio de presentación (showcase).** Aquí se muestran las **capacidades y la experiencia** del producto.
-> **No** contiene código fuente, lógica de negocio ni configuración de despliegue.
+> ⚠️ **Repositorio de presentación (showcase).** Muestra las **capacidades y la experiencia** del producto.
+> **No** contiene código fuente, lógica de negocio ni configuración de despliegue. El código es privado.
 
 ---
 
@@ -36,11 +39,30 @@
 
 ---
 
+## Tabla de contenidos
+
+- [¿Qué es InmobilarIA?](#qué-es-inmobilaria)
+- [El problema que resuelve](#el-problema-que-resuelve)
+- [Características](#características)
+- [AI Center — 11 módulos de IA](#ai-center--11-módulos-de-inteligencia-artificial)
+- [Galería de capturas](#galería-de-capturas)
+- [Tecnologías](#tecnologías)
+- [Arquitectura](#arquitectura)
+- [Seguridad](#seguridad)
+- [Estado del proyecto](#estado-del-proyecto)
+- [Casos de uso](#casos-de-uso)
+- [Roadmap](#roadmap)
+- [FAQ](#faq)
+- [Demo](#demo)
+- [Contacto](#contacto)
+
+---
+
 ## ¿Qué es InmobilarIA?
 
 **InmobilarIA** es una plataforma inmobiliaria SaaS premium que convierte la operativa diaria de una agencia en un flujo inteligente y automatizado. No es un CRM más: es un **sistema operativo inmobiliario** que integra inteligencia artificial en cada etapa del negocio, desde la captación del lead hasta la firma del contrato.
 
-Construida como producto **multi-tenant**, cada agencia opera en un espacio totalmente aislado —datos, usuarios, branding y configuración propios.
+Construida como producto **multi-tenant**, cada agencia opera en un espacio totalmente aislado —datos, usuarios, branding y configuración propios— bajo una misma plataforma.
 
 ---
 
@@ -59,41 +81,20 @@ Las agencias inmobiliarias pierden operaciones por fricción operativa: leads si
 
 ## Características
 
-### CRM Inmobiliario
-Pipeline Kanban de 8 etapas (nuevo lead → cerrado ganado/perdido). Drag-and-drop, historial completo de actividad, notas, documentos y comunicaciones por cada lead.
-
-### Gestión de Propiedades
-Cartera ilimitada de inmuebles con ficha completa, galería de fotos, mapa interactivo con clustering dinámico, filtros avanzados, comparador hasta 4 propiedades y dossier PDF corporativo. Panel lateral premium con diseño Airbnb/Idealista.
-
-### Tour Virtual 360°
-Visor panorámico WebGL disponible en cada propiedad. Salas procedurales cuando no hay fotos 360°, hotspots de navegación entre salas, fallback limpio si no hay GPU.
-
-### Gestión de Clientes
-Perfiles completos de compradores, vendedores, arrendatarios e inversores. Historial de visitas, documentos adjuntos, resumen AI y scoring de interés automático.
-
-### Matching IA
-Algoritmo de compatibilidad cliente-propiedad basado en presupuesto, preferencias, zona y características. Portal privado por cliente con propiedades ordenadas por relevancia.
-
-### Portal de Clientes
-Cada cliente recibe un enlace privado (token único) con acceso a propiedades seleccionadas según su perfil. Puede marcar "me interesa / no me interesa" y dejar comentarios por propiedad.
-
-### WhatsApp Business
-Agente de IA activo 24/7 que responde consultas, cualifica leads y captura información de contacto automáticamente. Campañas con templates personalizables por organización.
-
-### Multi-portal
-Publicación en portales inmobiliarios (Idealista, Fotocasa, etc.) con un clic desde la ficha del inmueble.
-
-### Analytics
-Dashboard con KPIs en tiempo real, funnel de ventas, evolución mensual de leads, rendimiento por agente e insights generados por IA.
-
-### Automatizaciones
-Reglas por evento (triggers + actions) para nutrir leads sin intervención manual. Templates predefinidas para los flujos más comunes.
-
-### Calculadoras financieras
-5 calculadoras: hipoteca, gastos de compra, rentabilidad, **capacidad de compra** (cualificación del comprador) y **rentabilidad avanzada** (ROI, cash flow, análisis de inversión completo), con exportación a PDF/CSV.
-
-### Multi-tenant SaaS
-Cada agencia opera en un entorno completamente aislado. El aislamiento se implementa a nivel de ORM — no requiere lógica adicional en cada pantalla.
+| Módulo | Descripción |
+|---|---|
+| **CRM Inmobiliario** | Pipeline Kanban de 8 etapas (nuevo lead → cerrado ganado/perdido). Drag-and-drop, historial de actividad, notas, documentos y comunicaciones por lead. |
+| **Gestión de Propiedades** | Cartera ilimitada con ficha completa, galería, mapa interactivo con clustering, filtros avanzados, comparador hasta 4 inmuebles y dossier PDF corporativo. |
+| **Tour Virtual 360°** | Visor panorámico WebGL en cada propiedad. Salas procedurales sin fotos 360°, hotspots de navegación, fallback limpio sin GPU. |
+| **Gestión de Clientes** | Perfiles de compradores, vendedores, arrendatarios e inversores. Historial de visitas, documentos, resumen IA y scoring de interés. |
+| **Matching IA** | Compatibilidad cliente-propiedad por presupuesto, preferencias, zona y características. Portal privado por cliente ordenado por relevancia. |
+| **Portal de Clientes** | Enlace privado por token con propiedades seleccionadas. El cliente marca "me interesa / no me interesa" y comenta por inmueble. |
+| **WhatsApp Business** | Agente IA 24/7 que responde, cualifica y captura contacto. Envío directo, campañas y plantillas por organización. |
+| **Visitas y Contratos** | Agenda profesional de visitas (lista/día/semana/mes) y generación de contratos legales (encargo, arras, compraventa, arrendamiento) en PDF premium. |
+| **Analytics IA** | KPIs en tiempo real, funnel de ventas, evolución mensual de leads, rendimiento por agente e insights generados por IA. |
+| **Automatizaciones** | Reglas por evento (triggers + actions) para nutrir leads sin intervención manual, con plantillas predefinidas. |
+| **Calculadoras financieras** | Hipoteca, gastos de compra, rentabilidad, **capacidad de compra** y **rentabilidad avanzada** (ROI, cash flow, análisis de inversión), exportables a PDF/CSV. |
+| **Multi-tenant SaaS** | Aislamiento total entre agencias a nivel de ORM — sin lógica adicional por pantalla. |
 
 ---
 
@@ -106,24 +107,18 @@ Cada agencia opera en un entorno completamente aislado. El aislamiento se implem
 | 📝 Anuncios IA | 8 formatos: Idealista, Fotocasa, Instagram, TikTok, Facebook, AirBnB, Luxury, Familia |
 | 🏠 Home Staging | Transformación visual de estancias vacías para foto profesional |
 | 🎬 Video Studio | Composición automática de imágenes + música → vídeo MP4 |
-| 🔍 Vision Search | Buscar propiedades similares por imagen |
-| 💰 Tasación Visual | Foto + ciudad → valoración estimada del mercado |
-| 📐 Floorplan AI | Análisis de planos: habitaciones, m², sugerencias de layout |
+| 🔍 Búsqueda Visual | Buscar propiedades similares por imagen |
+| 💰 Tasación Visual | Foto + ciudad → valoración estimada de mercado |
+| 📐 Planos IA | Análisis de planos: habitaciones, m², sugerencias de layout |
 | 🧠 AI Memory | Contexto persistente del cliente en todas las conversaciones |
 | ⚡ Automations | Workflows disparados por eventos con acciones IA |
 | 📈 AI Metering | Control de gasto en tokens por usuario y modelo |
 
 ---
 
-## Capturas de pantalla
+## Galería de capturas
 
-> Capturas reales de la aplicación con **datos de demostración** (sin información personal real).
-
-### Landing pública (SaaS Web)
-
-| Landing completa | Responsive (móvil) |
-|---|---|
-| ![Landing completa](screenshots/landing-full.png) | ![Landing móvil](screenshots/landing-mobile.png) |
+> Capturas **reales** de la aplicación actual con **datos de demostración** (sin información personal real). Modo oscuro enterprise.
 
 ### Panel y analítica
 
@@ -137,77 +132,115 @@ Cada agencia opera en un entorno completamente aislado. El aislamiento se implem
 
 ### Propiedades y clientes
 
-| Propiedades | Ficha de inmueble |
+| Propiedades | Clientes (CRM) |
 |---|---|
-| ![Propiedades](screenshots/properties.png) | ![Ficha de inmueble](screenshots/property-detail.png) |
+| ![Propiedades](screenshots/properties.png) | ![Clientes](screenshots/clients.png) |
 
-| Mapa interactivo | Clientes (CRM) |
+| Mapa interactivo | Agenda de visitas |
 |---|---|
-| ![Mapa interactivo](screenshots/properties-map.png) | ![Clientes](screenshots/crm-clients.png) |
+| ![Mapa interactivo](screenshots/map.png) | ![Visitas](screenshots/crm.png) |
 
-### Funcionalidades premium con IA
+### IA y contenido
 
-| Home Staging IA | Video Studio IA |
+| AI Center | Home Staging IA |
 |---|---|
-| ![Home Staging IA](screenshots/staging.png) | ![Video Studio IA](screenshots/video-studio.png) |
+| ![AI Center](screenshots/ia-workspace.png) | ![Home Staging IA](screenshots/home-staging.png) |
 
-| Generador de anuncios IA | Automatizaciones |
+| Generador de anuncios IA | Tasación visual IA |
 |---|---|
-| ![Generador de anuncios](screenshots/anuncios.png) | ![Automatizaciones](screenshots/automations.png) |
+| ![Generador de anuncios](screenshots/ads-generator.png) | ![Tasación visual](screenshots/valuation.png) |
 
-| WhatsApp Business | Calculadoras financieras |
+| Video Studio IA | Búsqueda visual IA |
 |---|---|
-| ![WhatsApp Business](screenshots/whatsapp.png) | ![Calculadoras](screenshots/calculators.png) |
+| ![Video Studio](screenshots/video-studio.png) | ![Búsqueda visual](screenshots/visual-search.png) |
 
-| Agentes | Visitas |
+### Marketing, automatización y cierre
+
+| WhatsApp Business | Automatizaciones |
 |---|---|
-| ![Agentes](screenshots/agents.png) | ![Visitas](screenshots/visits.png) |
+| ![WhatsApp Business](screenshots/marketing.png) | ![Automatizaciones](screenshots/automation.png) |
 
-### FHD / alta resolución
-
-| Dashboard FHD | Propiedades FHD |
+| Contratos PDF | Calculadoras financieras |
 |---|---|
-| ![Dashboard FHD](screenshots/dashboard-fhd.png) | ![Propiedades FHD](screenshots/properties-fhd.png) |
+| ![Contratos](screenshots/contracts.png) | ![Calculadoras](screenshots/calculators.png) |
+
+### Equipo y configuración
+
+| Equipo / agentes | Configuración |
+|---|---|
+| ![Equipo](screenshots/team.png) | ![Configuración](screenshots/settings.png) |
 
 ### Responsive
 
-| Móvil — Dashboard | Móvil — Propiedades |
+| Móvil — Dashboard | Tablet — Dashboard |
 |---|---|
-| ![Móvil Dashboard](screenshots/mobile-dashboard.png) | ![Móvil Propiedades](screenshots/mobile-properties.png) |
+| ![Móvil Dashboard](screenshots/mobile-dashboard.png) | ![Tablet Dashboard](screenshots/tablet-dashboard.png) |
+
+---
+
+## Tecnologías
+
+Una pila moderna, async y type-safe de extremo a extremo. *(El detalle de versiones e infraestructura interna se mantiene privado.)*
+
+**Frontend** — Next.js 16 (App Router · RSC · Turbopack) · React 19 · TypeScript (strict) · Tailwind CSS · Framer Motion · React-Three-Fiber / Three.js (3D, tour 360°) · Leaflet (mapas) · Recharts (analítica).
+
+**Backend** — FastAPI (42 routers · 200+ endpoints) · Python 3.12 · SQLAlchemy 2 async con hook de aislamiento multi-tenant · Alembic · Pydantic v2 · JWT + bcrypt.
+
+**IA** — Claude de Anthropic (Haiku / Sonnet / Opus) con *metering* de tokens por usuario y modelo; visión para staging, tasación y búsqueda visual.
+
+**Datos e infra** — SQLite en desarrollo · PostgreSQL en producción · Docker · generación de PDF · FFmpeg embebido para Video Studio.
+
+---
+
+## Arquitectura
+
+```
+        Agentes / Clientes / Portal público
+                      │
+        ┌─────────────▼─────────────┐
+        │   Frontend Web (Next.js 16)│  App Router · RSC · dark mode
+        └─────────────┬─────────────┘
+                      │  HTTPS
+        ┌─────────────▼─────────────┐
+        │  API de Servicios (FastAPI)│  42 routers · middleware de seguridad
+        │  Tenant hook (ORM)         │  WHERE organization_id = X automático
+        └──────┬───────────────┬─────┘
+               │               │
+   ┌───────────▼──┐     ┌──────▼─────────────┐
+   │ Base de datos│     │ Servicios de IA    │
+   │ SQLite / PG  │     │ Claude (Anthropic) │
+   └──────────────┘     └────────────────────┘
+```
+
+Detalle ampliado en [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ---
 
 ## Seguridad
 
-InmobilarIA implementa un modelo de seguridad de nivel enterprise auditado en junio de 2026 (14 rondas de auditoría).
+Modelo de seguridad de nivel enterprise, auditado en 14 rondas (junio 2026).
 
-### Aislamiento Multi-Tenant
-Cada agencia opera en un entorno de datos completamente aislado. El aislamiento se aplica automáticamente a nivel de ORM — es imposible que los datos de una agencia sean visibles para otra, incluso ante errores en los handlers.
+- **Aislamiento multi-tenant** automático a nivel de ORM — imposible filtrar datos entre agencias, incluso ante errores en los handlers.
+- **Autenticación** JWT + refresh tokens, contraseñas bcrypt, contraseña de admin de producción autogenerada, roles (admin / agente / visualización).
+- **Rate limiting** por IP en endpoints sensibles: login (5/min), chat IA (20/min), widget (20/min), webhooks (10/min).
+- **Webhooks** de WhatsApp verificados con HMAC-SHA256 en comparación de tiempo constante.
+- **Tests de seguridad**: 16 tests de regresión específicos dentro de la suite.
 
-### Autenticación
-JWT con refresh tokens. Contraseñas hasheadas con bcrypt. Contraseña de administrador de producción generada automáticamente. Roles por usuario (admin / agente / visualización).
-
-### Rate Limiting
-Protección por IP en todos los endpoints sensibles: login (5/min), chat AI (20/min), widget embebido (20/min), webhooks (10/min).
-
-### Verificación de Webhooks
-Los webhooks de WhatsApp se validan con HMAC-SHA256 usando comparación en tiempo constante para prevenir timing attacks.
-
-### Tests de Seguridad
-**151 tests en verde**, incluyendo 16 tests de regresión específicos para los controles de seguridad.
+Informe público: [SHOWCASE_SECURITY_REPORT.md](SHOWCASE_SECURITY_REPORT.md).
 
 ---
 
-## Estado del Proyecto
+## Estado del proyecto
 
 | Métrica | Estado |
 |---|---|
 | Tests (backend + frontend) | **151 + 32 passing** ✅ |
 | TypeScript errors | **0** ✅ |
-| Multi-tenant implementado | **Sí, nivel ORM** ✅ |
-| Seguridad auditada | **14 rondas · 82/100** ✅ |
-| Build producción | **49 rutas compiladas** ✅ |
-| Versión actual | **v0.8.0** |
+| Multi-tenant | **Sí, nivel ORM** ✅ |
+| Seguridad | **14 rondas auditada** ✅ |
+| API | **42 routers · 200+ endpoints** ✅ |
+| Build producción | **verde** ✅ |
+| Versión actual | **v0.9.0** |
 | Distribución | SaaS Web · Docker |
 
 ---
@@ -218,45 +251,51 @@ Los webhooks de WhatsApp se validan con HMAC-SHA256 usando comparación en tiemp
 - **Red con varias oficinas** — cada oficina opera aislada (multi-tenant) bajo una misma plataforma.
 - **Equipo de captación** — el agente de WhatsApp cualifica leads entrantes fuera de horario.
 - **Marketing inmobiliario** — anuncios y home staging generados en minutos, no en días.
-
----
-
-## Arquitectura (simplificada)
-
-```
-Agentes / Clientes
-       ↓
-Frontend Web (Next.js 16)
-       ↓
-API de Servicios (FastAPI) · Middleware de Seguridad
-       ↓
-Base de Datos (SQLite dev / PostgreSQL prod)
-       ↓
-Servicios IA (Anthropic Claude · Gemini · Stability AI)
-```
-
-> El detalle de implementación, versiones e infraestructura interna se mantiene privado de forma intencionada.
+- **Inversores** — calculadoras de capacidad de compra y rentabilidad avanzada (ROI, cash flow) para decidir con datos.
 
 ---
 
 ## Roadmap
 
-Ver [ROADMAP_PUBLIC.md](ROADMAP_PUBLIC.md) para el roadmap completo con prioridades.
+Roadmap completo y priorizado: [ROADMAP_PUBLIC.md](ROADMAP_PUBLIC.md).
 
-**Entregado recientemente:**
+**Entregado recientemente**
+- [x] Landing premium SaaS Web (rediseño inmersivo)
 - [x] Tour virtual 360° con visor WebGL y salas procedurales
-- [x] Multi-portal: publicación en portales con un clic
-- [x] Módulo de agentes con métricas reales de rendimiento
+- [x] Multi-portal: publicación con un clic
+- [x] Módulo de equipo con métricas reales de rendimiento
 - [x] Calculadoras de capacidad de compra y rentabilidad avanzada
-- [x] Hardening de seguridad multi-tenant (v0.8.0)
-- [x] 151 tests en verde
+- [x] AI Metering: control de gasto de tokens por usuario y modelo
+- [x] Hardening de seguridad multi-tenant · 151 tests en verde
 
-**Próximos pasos:**
+**Próximos pasos**
 - [ ] Matching UI (coincidencias cliente-propiedad)
 - [ ] Contratos avanzados (ofertas, firma digital)
 - [ ] Emails automáticos de visitas
 - [ ] Billing (Stripe)
 - [ ] App móvil nativa
+
+---
+
+## FAQ
+
+**¿Puedo ver el código fuente?**
+No. Este es un repositorio de presentación; el código es privado. Aquí se muestran capacidades, experiencia y capturas reales.
+
+**¿Las capturas son reales o mockups?**
+Reales. Se generan ejecutando la aplicación con datos de demostración (sin datos personales) mediante un script de captura automatizado.
+
+**¿Es realmente multi-tenant?**
+Sí. El aislamiento se aplica a nivel de ORM: cada query lleva automáticamente `WHERE organization_id = X`. No depende de filtros manuales en cada pantalla.
+
+**¿Qué IA utiliza?**
+Claude de Anthropic (Haiku / Sonnet / Opus según la tarea), con control de gasto de tokens por usuario y modelo.
+
+**¿Cómo se distribuye?**
+SaaS Web sobre Docker. PostgreSQL en producción.
+
+**¿Cómo solicito una demo?**
+Abre un *issue* o escribe a [sveti99fm@gmail.com](mailto:sveti99fm@gmail.com). Recorrido visual en la [demo en vivo](https://svetoslav1999.github.io/inmobiliaria-demo/).
 
 ---
 
@@ -268,21 +307,18 @@ Recorrido visual del producto: **[Demo en vivo](https://svetoslav1999.github.io/
 
 ## Contacto
 
-¿Interesado en el producto o en una demostración? Abre un *issue* en este repositorio o contacta a través de [sveti99fm@gmail.com](mailto:sveti99fm@gmail.com).
+¿Interesado en el producto o en una demostración? Abre un *issue* en este repositorio o escribe a [sveti99fm@gmail.com](mailto:sveti99fm@gmail.com).
 
 ---
 
-## Código fuente
+## Licencia
 
-El código fuente de este proyecto es **privado**.
-
-Este repositorio tiene como finalidad mostrar las capacidades y funcionalidades del producto sin exponer la implementación interna. Ver el [informe de seguridad del showcase](SHOWCASE_SECURITY_REPORT.md).
+Producto propietario. El código fuente es **privado** y no se distribuye. Este repositorio (textos, capturas y documentación de presentación) © InmobilarIA 2026 — todos los derechos reservados.
 
 ---
 
 <div align="center">
 
-© InmobilarIA 2026 · Todos los derechos reservados
+© InmobilarIA 2026 · Hecho con FastAPI, Next.js y Claude
 
 </div>
-

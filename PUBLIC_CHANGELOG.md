@@ -4,6 +4,14 @@
 
 ---
 
+## v0.9.1 — Junio 2026 · Refresco de presentación
+
+- **Galería de capturas renovada** — todas las imágenes regeneradas a partir del producto actual (28 capturas reales del panel, IA, CRM, marketing, analítica y responsive), reemplazando material antiguo.
+- **Navegación lateral estabilizada** — pulido estructural del *sidebar* (jerarquía de tarjetas, cero solapamientos en 280–400 px) para una experiencia impecable en cualquier ancho.
+- **Documentación alineada** — README, características, arquitectura y roadmap actualizados al estado real del producto.
+
+---
+
 ## v0.9.0 — Junio 2026 · Landing premium pública (SaaS Web)
 
 ### Nueva experiencia pública
