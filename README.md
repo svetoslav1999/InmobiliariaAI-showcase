@@ -8,10 +8,11 @@
 
 **CRM inmobiliario premium con IA integrada — captación, gestión, automatización y cierre en una sola plataforma SaaS multi-tenant.**
 
-[![Tests](https://img.shields.io/badge/tests-151%20backend%20%2B%2032%20frontend-brightgreen)](#estado-del-proyecto)
+[![Tests](https://img.shields.io/badge/tests-159%20backend%20%2B%2035%20frontend-brightgreen)](#estado-del-proyecto)
 [![Multi-tenant](https://img.shields.io/badge/multi--tenant-nivel%20ORM-blue)](#seguridad)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Alembic-336791?logo=postgresql&logoColor=white)](#arquitectura)
 [![Security](https://img.shields.io/badge/seguridad-14%20rondas%20auditada-orange)](#seguridad)
-[![Version](https://img.shields.io/badge/version-v0.9.0-purple)](#estado-del-proyecto)
+[![Version](https://img.shields.io/badge/version-v1.0.0-purple)](#estado-del-proyecto)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black)](#tecnologías)
 [![FastAPI](https://img.shields.io/badge/FastAPI-Python%203.12-009688)](#tecnologías)
 [![Claude](https://img.shields.io/badge/IA-Claude%20(Anthropic)-d97757)](#ai-center--11-módulos-de-inteligencia-artificial)
@@ -62,7 +63,7 @@
 
 **InmobilarIA** es una plataforma inmobiliaria SaaS premium que convierte la operativa diaria de una agencia en un flujo inteligente y automatizado. No es un CRM más: es un **sistema operativo inmobiliario** que integra inteligencia artificial en cada etapa del negocio, desde la captación del lead hasta la firma del contrato.
 
-Construida como producto **multi-tenant**, cada agencia opera en un espacio totalmente aislado —datos, usuarios, branding y configuración propios— bajo una misma plataforma.
+Construida como producto **multi-tenant sobre PostgreSQL**, cada agencia opera en un espacio totalmente aislado —datos, usuarios, branding y configuración propios— con migraciones de esquema gestionadas por Alembic para garantizar consistencia en producción.
 
 ---
 
@@ -234,13 +235,16 @@ Informe público: [SHOWCASE_SECURITY_REPORT.md](SHOWCASE_SECURITY_REPORT.md).
 
 | Métrica | Estado |
 |---|---|
-| Tests (backend + frontend) | **151 + 32 passing** ✅ |
+| Tests backend | **159 passing** ✅ |
+| Tests frontend | **35 passing** ✅ |
 | TypeScript errors | **0** ✅ |
 | Multi-tenant | **Sí, nivel ORM** ✅ |
+| Base de datos producción | **PostgreSQL 16** ✅ |
+| Migraciones | **Alembic — fuente única de verdad** ✅ |
 | Seguridad | **14 rondas auditada** ✅ |
 | API | **42 routers · 200+ endpoints** ✅ |
 | Build producción | **verde** ✅ |
-| Versión actual | **v0.9.0** |
+| Versión actual | **v1.0.0** |
 | Distribución | SaaS Web · Docker |
 
 ---
@@ -259,14 +263,15 @@ Informe público: [SHOWCASE_SECURITY_REPORT.md](SHOWCASE_SECURITY_REPORT.md).
 
 Roadmap completo y priorizado: [ROADMAP_PUBLIC.md](ROADMAP_PUBLIC.md).
 
-**Entregado recientemente**
-- [x] Landing premium SaaS Web (rediseño inmersivo)
+**Entregado recientemente (v1.0.0)**
+- [x] **Migración a PostgreSQL 16** — base de datos enterprise con Alembic migrations
+- [x] **159 tests en verde** — validación de esquema, compatibilidad PG y aislamiento tenant
+- [x] Landing premium SaaS Web (mapa neural WebGL vivo)
+- [x] Sidebar enterprise flat (HubSpot/ClickUp style)
+- [x] Streaming proxy sin timeout para llamadas IA lentas
 - [x] Tour virtual 360° con visor WebGL y salas procedurales
-- [x] Multi-portal: publicación con un clic
-- [x] Módulo de equipo con métricas reales de rendimiento
-- [x] Calculadoras de capacidad de compra y rentabilidad avanzada
 - [x] AI Metering: control de gasto de tokens por usuario y modelo
-- [x] Hardening de seguridad multi-tenant · 151 tests en verde
+- [x] Hardening de seguridad multi-tenant (14 rondas de auditoría)
 
 **Próximos pasos**
 - [ ] Matching UI (coincidencias cliente-propiedad)

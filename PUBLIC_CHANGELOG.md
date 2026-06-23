@@ -4,6 +4,24 @@
 
 ---
 
+## v1.0.0 — Junio 2026 · PostgreSQL, Alembic y madurez enterprise
+
+### Base de datos enterprise
+- **Migración a PostgreSQL 16** — la plataforma opera sobre PostgreSQL en producción: máxima fiabilidad, transacciones ACID y concurrencia real bajo carga.
+- **Alembic migrations** — las migraciones de esquema son la fuente única de verdad. La base de datos siempre está en el estado correcto al arrancar; no existen divergencias entre entornos.
+- **Suite de tests ampliada** — 159 tests en verde incluyendo validación de migraciones, compatibilidad PostgreSQL real y aislamiento multi-tenant bajo ambos motores.
+
+### Experiencia de producto
+- **Sidebar enterprise** — rediseño completo al estilo HubSpot/ClickUp: grupos con cabeceras, íconos + etiquetas, navegación más rápida y limpia.
+- **Centro IA** — hub central con métricas clickables y acceso directo a todos los módulos de inteligencia artificial.
+- **Feedback integrado** — widget de feedback de usuario disponible en toda la plataforma.
+
+### Rendimiento y fiabilidad
+- **Proxy sin timeout** — las llamadas a IA lentas (anuncios, home staging, vídeo) ya no se cortan. El servidor transmite la respuesta en streaming sin límite de tiempo.
+- **Launcher inteligente** — detecta y reemplaza instancias desactualizadas para evitar el error silencioso de "servidor antiguo sirviendo código viejo".
+
+---
+
 ## v0.9.1 — Junio 2026 · Refresco de presentación
 
 - **Galería de capturas renovada** — todas las imágenes regeneradas a partir del producto actual (28 capturas reales del panel, IA, CRM, marketing, analítica y responsive), reemplazando material antiguo.
