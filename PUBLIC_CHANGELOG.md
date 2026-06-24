@@ -22,6 +22,26 @@
 
 ---
 
+## v1.0.1 — Junio 2026 · Generador de Anuncios 12 plataformas + UX premium
+
+### Generador de Anuncios IA expandido
+- **12 portales simultáneos** — se añaden Habitaclia (Cataluña y Levante), Pisos.com (nacional) y Kyero (EN, compradores internacionales). El prompt de IA genera contenido específico para cada plataforma: tono, formato, CTA y estrategia diferenciada.
+- **Email Marketing (4 plantillas)** — captación de propietario, captación de comprador, seguimiento post-visita y reactivación de lead. Asunto y cuerpo copiables por separado.
+- **WhatsApp Marketing (5 mensajes)** — primer contacto, seguimiento, recordatorio de visita, recuperación de lead y cierre. Con contador de caracteres por límite de plataforma.
+- **Campaña Completa** — grid con las 12 plataformas en una sola vista; exportar todo al portapapeles con un clic.
+
+### Navegación UX premium
+- **Scroll horizontal de tabs** — la fila de plataformas ahora soporta cualquier número de tabs sin corte. Scroll suave con rueda del ratón, drag horizontal y botones de navegación con desvanecimiento lateral gradual.
+
+### Rendimiento
+- **Cliente IA singleton** — el cliente Anthropic se reutiliza entre llamadas, eliminando el coste de reconexión en cada generación.
+- **Prefetch de marketing** — al completar los anuncios, el contenido de email y WhatsApp se pre-genera en segundo plano. Al cambiar de modo, el resultado ya está disponible.
+
+### Galería
+- **28 capturas reales** — todas las pantallas regeneradas en modo oscuro enterprise a 1440×900 @2x, incluyendo nuevo generador de anuncios, floorplan, widget y detalle de propiedad.
+
+---
+
 ## v0.9.1 — Junio 2026 · Refresco de presentación
 
 - **Galería de capturas renovada** — todas las imágenes regeneradas a partir del producto actual (28 capturas reales del panel, IA, CRM, marketing, analítica y responsive), reemplazando material antiguo.

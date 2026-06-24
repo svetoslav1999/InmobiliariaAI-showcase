@@ -105,7 +105,7 @@ Las agencias inmobiliarias pierden operaciones por fricción operativa: leads si
 |---|---|
 | 🤖 Asistente IA | Chat comercial con herramientas (buscar propiedades, agendar visitas, crear tareas) |
 | 📊 Lead Scoring | Score 0-100 por lead, historial y panel de top leads |
-| 📝 Anuncios IA | 8 formatos: Idealista, Fotocasa, Instagram, TikTok, Facebook, AirBnB, Luxury, Familia |
+| 📝 Anuncios IA | **12 portales AI** (Idealista, Fotocasa, Instagram, Facebook, TikTok, Inversores, AirBnB, Lujo, Familias, Habitaclia, Pisos.com, Kyero EN) + Email Marketing (4 plantillas) + WhatsApp Marketing (5 mensajes) + Campaña Completa |
 | 🏠 Home Staging | Transformación visual de estancias vacías para foto profesional |
 | 🎬 Video Studio | Composición automática de imágenes + música → vídeo MP4 |
 | 🔍 Búsqueda Visual | Buscar propiedades similares por imagen |
@@ -155,11 +155,21 @@ Las agencias inmobiliarias pierden operaciones por fricción operativa: leads si
 |---|---|
 | ![Video Studio](screenshots/video-studio.png) | ![Búsqueda visual](screenshots/visual-search.png) |
 
+### Anuncios — 12 portales + Email + WhatsApp
+
+| Generador de Anuncios IA (12 plataformas) | Floorplan IA |
+|---|---|
+| ![Generador de anuncios](screenshots/ads-generator.png) | ![Floorplan IA](screenshots/floorplan.png) |
+
+| WhatsApp Marketing | Widget embebido |
+|---|---|
+| ![WhatsApp Marketing](screenshots/whatsapp.png) | ![Widget](screenshots/widget.png) |
+
 ### Marketing, automatización y cierre
 
 | WhatsApp Business | Automatizaciones |
 |---|---|
-| ![WhatsApp Business](screenshots/marketing.png) | ![Automatizaciones](screenshots/automation.png) |
+| ![WhatsApp Business](screenshots/whatsapp.png) | ![Automatizaciones](screenshots/automation.png) |
 
 | Contratos PDF | Calculadoras financieras |
 |---|---|
@@ -171,11 +181,9 @@ Las agencias inmobiliarias pierden operaciones por fricción operativa: leads si
 |---|---|
 | ![Equipo](screenshots/team.png) | ![Configuración](screenshots/settings.png) |
 
-### Responsive
-
-| Móvil — Dashboard | Tablet — Dashboard |
+| Organización | Propiedad — detalle completo |
 |---|---|
-| ![Móvil Dashboard](screenshots/mobile-dashboard.png) | ![Tablet Dashboard](screenshots/tablet-dashboard.png) |
+| ![Organización](screenshots/organization.png) | ![Propiedad detalle](screenshots/property-detail.png) |
 
 ---
 
