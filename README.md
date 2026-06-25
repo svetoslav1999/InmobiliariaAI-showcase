@@ -119,11 +119,11 @@ Las agencias inmobiliarias pierden operaciones por fricción operativa: leads si
 
 ## Galería de capturas
 
-> Capturas **reales** de la aplicación actual con **datos de demostración** (sin información personal real). Modo oscuro enterprise.
+> Capturas **reales** de la aplicación en su estado actual (junio 2026) con **datos de demostración** (sin información personal real). Modo oscuro enterprise. Resolución 1440×900 @2x.
 
-### Panel y analítica
+### Panel, analítica y pipeline
 
-| Dashboard | Analytics IA |
+| Dashboard interactivo | Analytics IA |
 |---|---|
 | ![Dashboard](screenshots/dashboard.png) | ![Analytics IA](screenshots/analytics.png) |
 
@@ -131,45 +131,57 @@ Las agencias inmobiliarias pierden operaciones por fricción operativa: leads si
 |---|---|
 | ![Pipeline CRM](screenshots/pipeline.png) | ![Lead Scoring IA](screenshots/lead-scoring.png) |
 
+### Gestión operacional
+
+| Agenda de visitas | Tareas kanban |
+|---|---|
+| ![Visitas](screenshots/visits.png) | ![Tareas](screenshots/tasks.png) |
+
+| Agentes — métricas y fichas | Conversaciones |
+|---|---|
+| ![Agentes](screenshots/agents.png) | ![Conversaciones](screenshots/conversations.png) |
+
 ### Propiedades y clientes
 
-| Propiedades | Clientes (CRM) |
+| Propiedades | Nueva propiedad — formulario premium |
 |---|---|
-| ![Propiedades](screenshots/properties.png) | ![Clientes](screenshots/clients.png) |
+| ![Propiedades](screenshots/properties.png) | ![Nueva propiedad](screenshots/properties-new.png) |
 
-| Mapa interactivo | Agenda de visitas |
+| Propiedad — detalle completo | Mapa interactivo |
 |---|---|
-| ![Mapa interactivo](screenshots/map.png) | ![Visitas](screenshots/crm.png) |
+| ![Propiedad detalle](screenshots/property-detail.png) | ![Mapa interactivo](screenshots/map.png) |
+
+| Clientes (CRM) | Organización |
+|---|---|
+| ![Clientes](screenshots/crm.png) | ![Organización](screenshots/organization.png) |
 
 ### IA y contenido
 
-| AI Center | Home Staging IA |
+| AI Center | Asistente IA |
 |---|---|
-| ![AI Center](screenshots/ia-workspace.png) | ![Home Staging IA](screenshots/home-staging.png) |
-
-| Generador de anuncios IA | Tasación visual IA |
-|---|---|
-| ![Generador de anuncios](screenshots/ads-generator.png) | ![Tasación visual](screenshots/valuation.png) |
-
-| Video Studio IA | Búsqueda visual IA |
-|---|---|
-| ![Video Studio](screenshots/video-studio.png) | ![Búsqueda visual](screenshots/visual-search.png) |
-
-### Anuncios — 12 portales + Email + WhatsApp
+| ![AI Center](screenshots/ia-workspace.png) | ![Asistente IA](screenshots/assistant.png) |
 
 | Generador de Anuncios IA (12 plataformas) | Floorplan IA |
 |---|---|
 | ![Generador de anuncios](screenshots/ads-generator.png) | ![Floorplan IA](screenshots/floorplan.png) |
 
-| WhatsApp Marketing | Widget embebido |
+| Email Marketing IA | WhatsApp Marketing IA |
 |---|---|
-| ![WhatsApp Marketing](screenshots/whatsapp.png) | ![Widget](screenshots/widget.png) |
+| ![Email Marketing](screenshots/email-marketing.png) | ![WhatsApp Marketing](screenshots/whatsapp-marketing.png) |
 
-### Marketing, automatización y cierre
-
-| WhatsApp Business | Automatizaciones |
+| Home Staging IA | Tasación visual IA |
 |---|---|
-| ![WhatsApp Business](screenshots/whatsapp.png) | ![Automatizaciones](screenshots/automation.png) |
+| ![Home Staging IA](screenshots/home-staging.png) | ![Tasación visual](screenshots/valuation.png) |
+
+| Video Studio IA | Búsqueda visual IA |
+|---|---|
+| ![Video Studio](screenshots/video-studio.png) | ![Búsqueda visual](screenshots/visual-search.png) |
+
+### Automatización, marketing y cierre
+
+| Automatizaciones | WhatsApp Business |
+|---|---|
+| ![Automatizaciones](screenshots/automation.png) | ![WhatsApp Business](screenshots/whatsapp.png) |
 
 | Contratos PDF | Calculadoras financieras |
 |---|---|
@@ -177,13 +189,13 @@ Las agencias inmobiliarias pierden operaciones por fricción operativa: leads si
 
 ### Equipo y configuración
 
-| Equipo / agentes | Configuración |
+| Equipo | Configuración |
 |---|---|
 | ![Equipo](screenshots/team.png) | ![Configuración](screenshots/settings.png) |
 
-| Organización | Propiedad — detalle completo |
+| Widget embebido | Organización |
 |---|---|
-| ![Organización](screenshots/organization.png) | ![Propiedad detalle](screenshots/property-detail.png) |
+| ![Widget](screenshots/widget.png) | ![Organización](screenshots/organization.png) |
 
 ---
 
@@ -271,7 +283,7 @@ Informe público: [SHOWCASE_SECURITY_REPORT.md](SHOWCASE_SECURITY_REPORT.md).
 
 Roadmap completo y priorizado: [ROADMAP_PUBLIC.md](ROADMAP_PUBLIC.md).
 
-**Entregado recientemente (v1.0.0)**
+**Entregado recientemente (v1.0.0 — junio 2026)**
 - [x] **Migración a PostgreSQL 16** — base de datos enterprise con Alembic migrations
 - [x] **159 tests en verde** — validación de esquema, compatibilidad PG y aislamiento tenant
 - [x] Landing premium SaaS Web (mapa neural WebGL vivo)
@@ -280,6 +292,12 @@ Roadmap completo y priorizado: [ROADMAP_PUBLIC.md](ROADMAP_PUBLIC.md).
 - [x] Tour virtual 360° con visor WebGL y salas procedurales
 - [x] AI Metering: control de gasto de tokens por usuario y modelo
 - [x] Hardening de seguridad multi-tenant (14 rondas de auditoría)
+- [x] **Formulario Nueva Propiedad rediseñado** — NumberSteppers, chips visuales, autocompletado CP→Provincia, barra de progreso
+- [x] **Dashboard interactivo** — tarjetas de stats clicables con navegación a secciones filtradas
+- [x] **Email Marketing + WhatsApp Marketing IA** — plantillas y mensajes generados con IA (Anuncios IA)
+- [x] **Módulo Conversaciones** — historial y gestión de comunicaciones
+- [x] **Tareas kanban** — tablero de tareas pendientes / en progreso / completadas
+- [x] **Badges PREMIUM** con contraste WCAG AA en modo claro y oscuro
 
 **Próximos pasos**
 - [ ] Matching UI (coincidencias cliente-propiedad)
