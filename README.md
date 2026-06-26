@@ -34,7 +34,11 @@
 
 ![InmobilarIA — landing](screenshots/landing-hero.png)
 
-*Captación, cualificación, matching y cierre con IA — presentado a nivel de startup unicornio.*
+*Nueva landing "Light Enterprise" — clara, elegante y centrada en el producto (inspiración Apple · Stripe · Linear · Notion · Vercel).*
+
+| Funcionalidades | IA en cada etapa | Preguntas frecuentes |
+|---|---|---|
+| ![Landing — características](screenshots/landing-features.png) | ![Landing — IA](screenshots/landing-modules.png) | ![Landing — FAQ](screenshots/landing-faq.png) |
 
 </div>
 
@@ -284,10 +288,10 @@ Informe público: [SHOWCASE_SECURITY_REPORT.md](SHOWCASE_SECURITY_REPORT.md).
 Roadmap completo y priorizado: [ROADMAP_PUBLIC.md](ROADMAP_PUBLIC.md).
 
 **Entregado recientemente (v1.0.0 — junio 2026)**
+- [x] **Landing rediseñada "Light Enterprise"** — diseño claro y premium (Apple/Stripe/Linear/Notion/Vercel): hero potente, botones premium, pipeline de IA, capturas reales, comparativa y FAQ
 - [x] **Migración a PostgreSQL 16** — base de datos enterprise con Alembic migrations
 - [x] **159 tests en verde** — validación de esquema, compatibilidad PG y aislamiento tenant
-- [x] Landing premium SaaS Web (mapa neural WebGL vivo)
-- [x] Sidebar enterprise flat (HubSpot/ClickUp style)
+- [x] Sidebar enterprise flat + auditoría funcional completa (34 rutas verificadas)
 - [x] Streaming proxy sin timeout para llamadas IA lentas
 - [x] Tour virtual 360° con visor WebGL y salas procedurales
 - [x] AI Metering: control de gasto de tokens por usuario y modelo

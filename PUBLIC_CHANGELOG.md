@@ -4,6 +4,19 @@
 
 ---
 
+## v1.0.1 — Junio 2026 · Nueva landing y pulido
+
+### Landing rediseñada "Light Enterprise"
+- **Nuevo diseño claro y premium** inspirado en Apple, Stripe, Linear, Notion y Vercel — se retira el estilo anterior (mapa neural) por una página de producto elegante, con mucho espacio en blanco y tipografía cuidada.
+- **Más contenido y mejor explicado**: hero potente con mockup real del producto, barra de estadísticas, problema→solución, funcionalidades, pipeline de IA paso a paso, capturas reales, comparativa con el método tradicional y una sección de preguntas frecuentes.
+- **Botones premium** y animaciones sutiles; totalmente responsive (escritorio, tablet y móvil).
+
+### Calidad
+- **Auditoría funcional completa** de la aplicación (todas las pantallas verificadas) y aislamiento entre agencias confirmado.
+- **Capturas actualizadas** en toda la documentación, reflejando el estado actual del producto.
+
+---
+
 ## v1.0.0 — Junio 2026 · PostgreSQL, Alembic y madurez enterprise
 
 ### Base de datos enterprise
