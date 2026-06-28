@@ -283,8 +283,8 @@ Informe público: [SHOWCASE_SECURITY_REPORT.md](SHOWCASE_SECURITY_REPORT.md).
 | Seguridad | **14 rondas auditada** ✅ |
 | API | **42 routers · 200+ endpoints** ✅ |
 | Build producción | **verde** ✅ |
-| Versión actual | **v1.0.0** |
-| Distribución | SaaS Web · Docker |
+| Versión actual | **v1.1.0** |
+| Distribución | SaaS Web · Docker Compose |
 
 ---
 
@@ -302,21 +302,19 @@ Informe público: [SHOWCASE_SECURITY_REPORT.md](SHOWCASE_SECURITY_REPORT.md).
 
 Roadmap completo y priorizado: [ROADMAP_PUBLIC.md](ROADMAP_PUBLIC.md).
 
-**Entregado recientemente (v1.0.0 — junio 2026)**
+**Entregado recientemente (v1.1.0 — junio 2026)**
+- [x] **Docker Compose completo** — 4 servicios orquestados (Next.js · FastAPI · PostgreSQL 16 · Redis 7), healthchecks encadenados, log rotation, parámetros PG optimizados
+- [x] **Redis 7 integrado** — rate limiting distribuido por ventana deslizante, circuit breaker IA, caché de respuestas, budget counters de gasto por proveedor
+- [x] **190 tests en verde** — cobertura ampliada con tests de circuit breaker, budget de IA, caché Redis y sliding-window rate limiter
+- [x] **Security headers en frontend** (X-Frame-Options, CSP, Referrer-Policy, Permissions-Policy) — antes solo en backend
+- [x] **Página 404 personalizada** — diseño coherente con la marca, links a Dashboard y Home
 - [x] **Landing rediseñada "Light Enterprise"** — diseño claro y premium (Apple/Stripe/Linear/Notion/Vercel): hero potente, botones premium, pipeline de IA, capturas reales, comparativa y FAQ
 - [x] **Migración a PostgreSQL 16** — base de datos enterprise con Alembic migrations
-- [x] **159 tests en verde** — validación de esquema, compatibilidad PG y aislamiento tenant
 - [x] Sidebar enterprise flat + auditoría funcional completa (34 rutas verificadas)
 - [x] Streaming proxy sin timeout para llamadas IA lentas
 - [x] Tour virtual 360° con visor WebGL y salas procedurales
 - [x] AI Metering: control de gasto de tokens por usuario y modelo
 - [x] Hardening de seguridad multi-tenant (14 rondas de auditoría)
-- [x] **Formulario Nueva Propiedad rediseñado** — NumberSteppers, chips visuales, autocompletado CP→Provincia, barra de progreso
-- [x] **Dashboard interactivo** — tarjetas de stats clicables con navegación a secciones filtradas
-- [x] **Email Marketing + WhatsApp Marketing IA** — plantillas y mensajes generados con IA (Anuncios IA)
-- [x] **Módulo Conversaciones** — historial y gestión de comunicaciones
-- [x] **Tareas kanban** — tablero de tareas pendientes / en progreso / completadas
-- [x] **Badges PREMIUM** con contraste WCAG AA en modo claro y oscuro
 
 **Próximos pasos**
 - [ ] Matching UI (coincidencias cliente-propiedad)
