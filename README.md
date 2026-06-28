@@ -8,11 +8,12 @@
 
 **CRM inmobiliario premium con IA integrada — captación, gestión, automatización y cierre en una sola plataforma SaaS multi-tenant.**
 
-[![Tests](https://img.shields.io/badge/tests-159%20backend%20%2B%2035%20frontend-brightgreen)](#estado-del-proyecto)
+[![Tests](https://img.shields.io/badge/tests-190%20backend%20%2B%2035%20frontend-brightgreen)](#estado-del-proyecto)
 [![Multi-tenant](https://img.shields.io/badge/multi--tenant-nivel%20ORM-blue)](#seguridad)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Alembic-336791?logo=postgresql&logoColor=white)](#arquitectura)
-[![Security](https://img.shields.io/badge/seguridad-14%20rondas%20auditada-orange)](#seguridad)
-[![Version](https://img.shields.io/badge/version-v1.0.0-purple)](#estado-del-proyecto)
+[![Redis](https://img.shields.io/badge/Redis-7--alpine-DC382D?logo=redis&logoColor=white)](#arquitectura)
+[![Security](https://img.shields.io/badge/seguridad-89%2F100-orange)](#seguridad)
+[![Version](https://img.shields.io/badge/version-v1.1.0-purple)](#estado-del-proyecto)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black)](#tecnologías)
 [![FastAPI](https://img.shields.io/badge/FastAPI-Python%203.12-009688)](#tecnologías)
 [![Claude](https://img.shields.io/badge/IA-Claude%20(Anthropic)-d97757)](#ai-center--11-módulos-de-inteligencia-artificial)
@@ -211,9 +212,9 @@ Una pila moderna, async y type-safe de extremo a extremo. *(El detalle de versio
 
 **Backend** — FastAPI (42 routers · 200+ endpoints) · Python 3.12 · SQLAlchemy 2 async con hook de aislamiento multi-tenant · Alembic · Pydantic v2 · JWT + bcrypt.
 
-**IA** — Claude de Anthropic (Haiku / Sonnet / Opus) con *metering* de tokens por usuario y modelo; visión para staging, tasación y búsqueda visual.
+**IA** — Claude de Anthropic (Haiku / Sonnet / Opus) con *metering* de tokens por usuario y modelo; visión para staging, tasación y búsqueda visual. **Circuit breaker económico**: presupuestos configurables por organización/usuario/proveedor/modelo con contadores Redis atómicos.
 
-**Datos e infra** — SQLite en desarrollo · PostgreSQL en producción · Docker · generación de PDF · FFmpeg embebido para Video Studio.
+**Datos e infra** — SQLite en desarrollo · PostgreSQL en producción · Redis 7 (rate-limiting distribuido, cache IA, budget counters) · Docker Compose con healthchecks · generación de PDF · FFmpeg embebido para Video Studio.
 
 ---
 
@@ -229,12 +230,22 @@ Una pila moderna, async y type-safe de extremo a extremo. *(El detalle de versio
         ┌─────────────▼─────────────┐
         │  API de Servicios (FastAPI)│  42 routers · middleware de seguridad
         │  Tenant hook (ORM)         │  WHERE organization_id = X automático
-        └──────┬───────────────┬─────┘
-               │               │
-   ┌───────────▼──┐     ┌──────▼─────────────┐
-   │ Base de datos│     │ Servicios de IA    │
-   │ SQLite / PG  │     │ Claude (Anthropic) │
-   └──────────────┘     └────────────────────┘
+        │  require_ai_quota (dep.)   │  Budget check antes de cada llamada IA
+        └──────┬────────────┬────────┘
+               │            │
+   ┌───────────▼──┐  ┌──────▼──────────────────────┐
+   │ PostgreSQL   │  │  Redis 7                    │
+   │ (datos +     │  │  rate-limit · cache IA      │
+   │  ai_usage    │  │  budget counters · locks    │
+   │  ledger)     │  │  circuit breaker provider   │
+   └──────────────┘  └──────┬──────────────────────┘
+                             │
+                    ┌────────▼────────────┐
+                    │ Servicios IA        │
+                    │ Claude (Anthropic)  │
+                    │ Gemini · Stability  │
+                    │ Budget: 8 dims USD  │
+                    └─────────────────────┘
 ```
 
 Detalle ampliado en [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
@@ -247,9 +258,13 @@ Modelo de seguridad de nivel enterprise, auditado en 14 rondas (junio 2026).
 
 - **Aislamiento multi-tenant** automático a nivel de ORM — imposible filtrar datos entre agencias, incluso ante errores en los handlers.
 - **Autenticación** JWT + refresh tokens, contraseñas bcrypt, contraseña de admin de producción autogenerada, roles (admin / agente / visualización).
-- **Rate limiting** por IP en endpoints sensibles: login (5/min), chat IA (20/min), widget (20/min), webhooks (10/min).
+- **Rate limiting distribuido** via Redis sliding-window (sorted set) por IP y usuario: login (5/min), chat IA (20/min), widget (20/min), webhooks (10/min). Correcto bajo N workers.
+- **Circuit breaker económico IA**: presupuestos USD configurables en 8 dimensiones (global/org/usuario · diario/mensual · proveedor · modelo). Contadores Redis atómicos → enforcement < 1 ms sin latencia DB.
+- **Cache de respuestas IA**: peticiones deterministas idénticas no llegan al proveedor — deduplica single-flight via Redis lock. TTL configurable (default: 24h).
+- **Circuit breaker de proveedor**: N fallos consecutivos abre el circuito → fast-fail sin gastar créditos hasta que el proveedor se recupera.
+- **Retry inteligente**: backoff exponencial en errores 429/529/timeout de Anthropic.
 - **Webhooks** de WhatsApp verificados con HMAC-SHA256 en comparación de tiempo constante.
-- **Tests de seguridad**: 16 tests de regresión específicos dentro de la suite.
+- **Tests de seguridad**: 190 tests en suite (backend), 0 fallos.
 
 Informe público: [SHOWCASE_SECURITY_REPORT.md](SHOWCASE_SECURITY_REPORT.md).
 
