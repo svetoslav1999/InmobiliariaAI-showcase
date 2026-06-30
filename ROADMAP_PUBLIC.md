@@ -1,14 +1,22 @@
 # InmobilarIA — Roadmap Público
 
-> Última actualización: junio 2026 · v0.8.0
+> Última actualización: junio 2026 · v1.2.0
 
 Este roadmap refleja las prioridades del producto ordenadas por impacto comercial para las agencias inmobiliarias. Los plazos son orientativos.
 
 ---
 
-## Estado actual: v0.8.0
+## Estado actual: v1.2.0
 
-El producto está en **estado de producción técnica**: backend estable, seguridad auditada (14 rondas), 151 tests en verde y un build limpio. Lo que sigue es completar el ciclo comercial completo y escalar como SaaS.
+El producto está en **estado de producción técnica**: backend estable sobre PostgreSQL real, seguridad auditada (14 rondas), 200 tests en verde, build limpio, despliegue SaaS Web vía Docker Compose (4 servicios) y un panel Super Admin propio para administrar la plataforma. Lo que sigue es completar el ciclo comercial completo (cobro, contratos avanzados, automatizaciones) y escalar a más agencias.
+
+---
+
+## Recientemente completado
+
+- ✅ **SaaS Web** — la plataforma ya no es solo escritorio: despliegue completo vía Docker Compose (Next.js · FastAPI · PostgreSQL 16 · Redis 7), con healthchecks encadenados.
+- ✅ **Panel Super Admin** — control de plataforma, infraestructura, seguridad y backups independiente de cualquier agencia.
+- ✅ **Arquitectura de facturación (Stripe)** — planes, suscripciones y webhooks listos en backend; activación pendiente de claves de producción (ver punto 4).
 
 ---
 
@@ -51,9 +59,9 @@ El producto está en **estado de producción técnica**: backend estable, seguri
 
 ---
 
-### 4. Billing — Stripe — alta prioridad
+### 4. Billing — activación de Stripe en producción — alta prioridad
 
-**Qué:** suscripción SaaS con planes starter / pro / enterprise. El control de cuotas de IA ya está implementado en backend.
+**Qué:** la arquitectura de suscripción SaaS (planes starter / pro / enterprise, MRR/ARR, webhooks) ya está construida en backend y panel Super Admin. Falta activarla con claves de producción y publicar el plan de precios. El control de cuotas de IA por plan ya está implementado y en uso.
 
 **Por qué:** requisito para cobrar a clientes y escalar el negocio.
 
@@ -93,11 +101,11 @@ El producto está en **estado de producción técnica**: backend estable, seguri
 
 ---
 
-### 8. SaaS Hosting — prioridad alta para escalar
+### 8. CI/CD y despliegue automatizado — prioridad media
 
-**Qué:** infraestructura web para que las agencias accedan a InmobilarIA sin instalar nada. PostgreSQL en producción, Docker, nginx, CI/CD.
+**Qué:** pipeline de integración continua que construya, pruebe y despliegue automáticamente cada cambio sobre la infraestructura Docker Compose ya existente (PostgreSQL + Redis + backend + frontend).
 
-**Por qué:** actualmente solo existe distribución como aplicación de escritorio (Windows). El modo web reduce la fricción de adopción.
+**Por qué:** el despliegue web (Docker Compose, PostgreSQL en producción) ya está construido y validado — falta automatizar el ciclo de entrega para reducir el trabajo manual de cada release.
 
 ---
 
@@ -123,7 +131,7 @@ El producto está en **estado de producción técnica**: backend estable, seguri
 |---|---|---|
 | **Fase 1 — MVP SaaS** | Producto vendible y autoservicio | Matching UI, contratos, emails visitas, Stripe, deduplicación de leads |
 | **Fase 2 — Automatización** | Reducir tiempo manual del agente 40% | Stage triggers, scoring automático, templates de automations, portal mejorado |
-| **Fase 3 — Escalado** | 50+ agencias simultáneas | SaaS hosting, PostgreSQL, Docker, CI/CD, backups cloud |
+| **Fase 3 — Escalado** | 50+ agencias simultáneas | ✅ SaaS hosting, PostgreSQL, Docker · CI/CD, backups cloud automatizados (pendiente) |
 | **Fase 4 — IA Avanzada** | Diferenciación competitiva | Propensity scoring, precio óptimo, auto-assignment de agentes, negociación asistida |
 
 ---

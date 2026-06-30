@@ -8,17 +8,18 @@
 
 **CRM inmobiliario premium con IA integrada — captación, gestión, automatización y cierre en una sola plataforma SaaS multi-tenant.**
 
-[![Tests](https://img.shields.io/badge/tests-190%20backend%20%2B%2035%20frontend-brightgreen)](#estado-del-proyecto)
+[![Tests](https://img.shields.io/badge/tests-200%20backend%20%2B%2035%20frontend-brightgreen)](#estado-del-proyecto)
 [![Multi-tenant](https://img.shields.io/badge/multi--tenant-nivel%20ORM-blue)](#seguridad)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Alembic-336791?logo=postgresql&logoColor=white)](#arquitectura)
 [![Redis](https://img.shields.io/badge/Redis-7--alpine-DC382D?logo=redis&logoColor=white)](#arquitectura)
+[![Docker](https://img.shields.io/badge/Docker-Compose%204%20servicios-2496ED?logo=docker&logoColor=white)](#arquitectura)
 [![Security](https://img.shields.io/badge/seguridad-89%2F100-orange)](#seguridad)
-[![Version](https://img.shields.io/badge/version-v1.1.0-purple)](#estado-del-proyecto)
+[![Version](https://img.shields.io/badge/version-v1.2.0-purple)](#estado-del-proyecto)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black)](#tecnologías)
 [![FastAPI](https://img.shields.io/badge/FastAPI-Python%203.12-009688)](#tecnologías)
 [![Claude](https://img.shields.io/badge/IA-Claude%20(Anthropic)-d97757)](#ai-center--11-módulos-de-inteligencia-artificial)
 
-`IA` · `Multi-tenant` · `SaaS Web` · `Dark mode enterprise` · `42 routers · 200+ endpoints`
+`IA` · `Multi-tenant` · `SaaS Web` · `Panel Super Admin` · `Dark mode enterprise` · `42 routers · 240+ endpoints`
 
 </div>
 
@@ -51,6 +52,7 @@
 - [El problema que resuelve](#el-problema-que-resuelve)
 - [Características](#características)
 - [AI Center — 11 módulos de IA](#ai-center--11-módulos-de-inteligencia-artificial)
+- [Panel Super Admin — Control Center](#panel-super-admin--control-center)
 - [Galería de capturas](#galería-de-capturas)
 - [Tecnologías](#tecnologías)
 - [Arquitectura](#arquitectura)
@@ -101,6 +103,7 @@ Las agencias inmobiliarias pierden operaciones por fricción operativa: leads si
 | **Automatizaciones** | Reglas por evento (triggers + actions) para nutrir leads sin intervención manual, con plantillas predefinidas. |
 | **Calculadoras financieras** | Hipoteca, gastos de compra, rentabilidad, **capacidad de compra** y **rentabilidad avanzada** (ROI, cash flow, análisis de inversión), exportables a PDF/CSV. |
 | **Multi-tenant SaaS** | Aislamiento total entre agencias a nivel de ORM — sin lógica adicional por pantalla. |
+| **Panel Super Admin** | Centro de control de la plataforma completa, independiente de cualquier agencia — ver sección dedicada [más abajo](#panel-super-admin--control-center). |
 
 ---
 
@@ -119,6 +122,31 @@ Las agencias inmobiliarias pierden operaciones por fricción operativa: leads si
 | 🧠 AI Memory | Contexto persistente del cliente en todas las conversaciones |
 | ⚡ Automations | Workflows disparados por eventos con acciones IA |
 | 📈 AI Metering | Control de gasto en tokens por usuario y modelo |
+
+---
+
+## Panel Super Admin — Control Center
+
+Plataforma de administración independiente de cualquier agencia: un Super Admin gestiona el SaaS completo (todas las organizaciones, usuarios, consumo de IA, infraestructura y seguridad) desde un panel propio, separado del CRM de cada cliente.
+
+| Dashboard de plataforma | Infraestructura en vivo |
+|---|---|
+| ![Super Admin Dashboard](screenshots/admin-dashboard.png) | ![Infraestructura](screenshots/admin-infra.png) |
+
+| Seguridad y circuit breakers | Backups |
+|---|---|
+| ![Seguridad](screenshots/admin-security.png) | ![Backups](screenshots/admin-backups.png) |
+
+**Qué incluye:**
+- **Organizaciones y usuarios** — vista cross-tenant de todas las agencias, planes y cuentas, sin salir del panel.
+- **Consumo de IA** — coste y tokens reales por proveedor (Claude/Gemini), por organización y por usuario, con previsión de gasto mensual.
+- **Infraestructura en vivo** — métricas reales de host, Redis y PostgreSQL (latencia, memoria, conexiones, tablas) cuando el despliegue las expone; nunca datos inventados — si un servicio no está disponible, el panel lo dice explícitamente y explica por qué.
+- **Seguridad** — accesos, intentos fallidos, IPs sospechosas y estado de los circuit breakers de IA por proveedor, en tiempo real.
+- **Backups** — crear, verificar, descargar y restaurar copias de seguridad desde la interfaz.
+- **Auditoría, logs, alertas y mantenimiento** — trazabilidad completa de la actividad de plataforma.
+- **Facturación (Stripe)** — arquitectura de suscripciones lista (planes, MRR/ARR, webhooks); se activa automáticamente al configurar las claves, sin cambios de código.
+
+> Por diseño, el panel administra la **aplicación**, no el host: la monitorización de servidor (CPU/RAM de la VPS) se delega en herramientas externas (Grafana, Prometheus, Uptime Kuma), no en acceso directo al daemon de Docker — evita dar al backend privilegios de facto sobre la máquina.
 
 ---
 
@@ -192,15 +220,25 @@ Las agencias inmobiliarias pierden operaciones por fricción operativa: leads si
 |---|---|
 | ![Contratos](screenshots/contracts.png) | ![Calculadoras](screenshots/calculators.png) |
 
-### Equipo y configuración
+### Configuración
 
-| Equipo | Configuración |
+| Configuración | Widget embebido |
 |---|---|
-| ![Equipo](screenshots/team.png) | ![Configuración](screenshots/settings.png) |
+| ![Configuración](screenshots/settings.png) | ![Widget](screenshots/widget.png) |
 
-| Widget embebido | Organización |
+### Panel Super Admin
+
+| Organizaciones | Usuarios |
 |---|---|
-| ![Widget](screenshots/widget.png) | ![Organización](screenshots/organization.png) |
+| ![Super Admin — Organizaciones](screenshots/admin-organizations.png) | ![Super Admin — Usuarios](screenshots/admin-users.png) |
+
+| Consumo de IA | Auditoría |
+|---|---|
+| ![Super Admin — Consumo IA](screenshots/admin-ai.png) | ![Super Admin — Auditoría](screenshots/admin-audit.png) |
+
+| Logs de plataforma |
+|---|
+| ![Super Admin — Logs](screenshots/admin-logs.png) |
 
 ---
 
@@ -210,7 +248,7 @@ Una pila moderna, async y type-safe de extremo a extremo. *(El detalle de versio
 
 **Frontend** — Next.js 16 (App Router · RSC · Turbopack) · React 19 · TypeScript (strict) · Tailwind CSS · Framer Motion · React-Three-Fiber / Three.js (3D, tour 360°) · Leaflet (mapas) · Recharts (analítica).
 
-**Backend** — FastAPI (42 routers · 200+ endpoints) · Python 3.12 · SQLAlchemy 2 async con hook de aislamiento multi-tenant · Alembic · Pydantic v2 · JWT + bcrypt.
+**Backend** — FastAPI (42 routers · 240+ endpoints, incluyendo el panel Super Admin independiente) · Python 3.12 · SQLAlchemy 2 async con hook de aislamiento multi-tenant · Alembic · Pydantic v2 · JWT + bcrypt.
 
 **IA** — Claude de Anthropic (Haiku / Sonnet / Opus) con *metering* de tokens por usuario y modelo; visión para staging, tasación y búsqueda visual. **Circuit breaker económico**: presupuestos configurables por organización/usuario/proveedor/modelo con contadores Redis atómicos.
 
@@ -246,6 +284,12 @@ Una pila moderna, async y type-safe de extremo a extremo. *(El detalle de versio
                     │ Gemini · Stability  │
                     │ Budget: 8 dims USD  │
                     └─────────────────────┘
+
+        ┌──────────────────────────────────┐
+        │  Panel Super Admin (/admin/*)     │  Independiente de cualquier
+        │  Guard propio · cross-tenant      │  organización · fail-closed
+        │  is_active AND is_superadmin      │  por defecto
+        └──────────────────────────────────┘
 ```
 
 Detalle ampliado en [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
@@ -264,7 +308,8 @@ Modelo de seguridad de nivel enterprise, auditado en 14 rondas (junio 2026).
 - **Circuit breaker de proveedor**: N fallos consecutivos abre el circuito → fast-fail sin gastar créditos hasta que el proveedor se recupera.
 - **Retry inteligente**: backoff exponencial en errores 429/529/timeout de Anthropic.
 - **Webhooks** de WhatsApp verificados con HMAC-SHA256 en comparación de tiempo constante.
-- **Tests de seguridad**: 190 tests en suite (backend), 0 fallos.
+- **Panel Super Admin aislado**: guard dedicado (no reutiliza la autenticación de tenant) — requiere `is_active` Y `is_superadmin`; 401 sin sesión, 403 si no es Super Admin. El aislamiento multi-tenant permanece desactivado por defecto incluso para el Super Admin: cada lectura cross-tenant lo declara explícitamente, así que un descuido falla cerrado en vez de filtrar datos.
+- **Tests de seguridad**: 200 tests en suite (backend), 0 fallos — incluye validación de migraciones contra PostgreSQL real, no solo SQLite.
 
 Informe público: [SHOWCASE_SECURITY_REPORT.md](SHOWCASE_SECURITY_REPORT.md).
 
@@ -274,17 +319,18 @@ Informe público: [SHOWCASE_SECURITY_REPORT.md](SHOWCASE_SECURITY_REPORT.md).
 
 | Métrica | Estado |
 |---|---|
-| Tests backend | **159 passing** ✅ |
+| Tests backend | **200 passing** ✅ |
 | Tests frontend | **35 passing** ✅ |
 | TypeScript errors | **0** ✅ |
 | Multi-tenant | **Sí, nivel ORM** ✅ |
 | Base de datos producción | **PostgreSQL 16** ✅ |
-| Migraciones | **Alembic — fuente única de verdad** ✅ |
+| Migraciones | **Alembic — fuente única de verdad, validada contra PostgreSQL real** ✅ |
 | Seguridad | **14 rondas auditada** ✅ |
-| API | **42 routers · 200+ endpoints** ✅ |
+| API | **42 routers · 240+ endpoints** ✅ |
+| Panel Super Admin | **Independiente, cross-tenant, fail-closed** ✅ |
 | Build producción | **verde** ✅ |
-| Versión actual | **v1.1.0** |
-| Distribución | SaaS Web · Docker Compose |
+| Versión actual | **v1.2.0** |
+| Distribución | SaaS Web · Docker Compose (4 servicios orquestados) |
 
 ---
 
@@ -302,15 +348,20 @@ Informe público: [SHOWCASE_SECURITY_REPORT.md](SHOWCASE_SECURITY_REPORT.md).
 
 Roadmap completo y priorizado: [ROADMAP_PUBLIC.md](ROADMAP_PUBLIC.md).
 
-**Entregado recientemente (v1.1.0 — junio 2026)**
+**Entregado recientemente (v1.2.0 — junio 2026)**
+- [x] **Panel Super Admin — Control Center** — administración de la plataforma completa independiente de cualquier agencia: organizaciones, usuarios, consumo de IA, infraestructura en vivo, seguridad, backups, auditoría y mantenimiento
+- [x] **Arquitectura de facturación (Stripe)** — planes, suscripciones, MRR/ARR y webhooks listos en backend y panel; queda dormida y se activa sola al configurar las claves, sin tocar código
+- [x] **Migración 0003 validada contra PostgreSQL real** vía Docker Compose (no solo SQLite) — encontrados y corregidos 2 bugs de compatibilidad antes de llegar a producción
+- [x] **200 tests en verde** (+10 desde v1.1.0)
+
+**Entregado anteriormente (v1.1.0)**
 - [x] **Docker Compose completo** — 4 servicios orquestados (Next.js · FastAPI · PostgreSQL 16 · Redis 7), healthchecks encadenados, log rotation, parámetros PG optimizados
 - [x] **Redis 7 integrado** — rate limiting distribuido por ventana deslizante, circuit breaker IA, caché de respuestas, budget counters de gasto por proveedor
-- [x] **190 tests en verde** — cobertura ampliada con tests de circuit breaker, budget de IA, caché Redis y sliding-window rate limiter
 - [x] **Security headers en frontend** (X-Frame-Options, CSP, Referrer-Policy, Permissions-Policy) — antes solo en backend
 - [x] **Página 404 personalizada** — diseño coherente con la marca, links a Dashboard y Home
 - [x] **Landing rediseñada "Light Enterprise"** — diseño claro y premium (Apple/Stripe/Linear/Notion/Vercel): hero potente, botones premium, pipeline de IA, capturas reales, comparativa y FAQ
 - [x] **Migración a PostgreSQL 16** — base de datos enterprise con Alembic migrations
-- [x] Sidebar enterprise flat + auditoría funcional completa (34 rutas verificadas)
+- [x] Sidebar enterprise flat + auditoría funcional completa
 - [x] Streaming proxy sin timeout para llamadas IA lentas
 - [x] Tour virtual 360° con visor WebGL y salas procedurales
 - [x] AI Metering: control de gasto de tokens por usuario y modelo
@@ -320,8 +371,9 @@ Roadmap completo y priorizado: [ROADMAP_PUBLIC.md](ROADMAP_PUBLIC.md).
 - [ ] Matching UI (coincidencias cliente-propiedad)
 - [ ] Contratos avanzados (ofertas, firma digital)
 - [ ] Emails automáticos de visitas
-- [ ] Billing (Stripe)
+- [ ] Activación de Stripe en producción (claves live + plan de precios público)
 - [ ] App móvil nativa
+- [ ] API pública para integraciones de terceros
 
 ---
 

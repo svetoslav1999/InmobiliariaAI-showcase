@@ -4,7 +4,21 @@
 
 ---
 
-## v1.0.1 — Junio 2026 · Nueva landing y pulido
+## v1.2.0 — Junio 2026 · Panel Super Admin y validación PostgreSQL real
+
+### Panel Super Admin — Control Center
+- **Nuevo panel de administración de plataforma**, completamente independiente de cualquier agencia: el operador del SaaS gestiona organizaciones, usuarios, consumo de IA, infraestructura, seguridad, backups y auditoría desde una interfaz propia.
+- **Infraestructura en vivo** — métricas reales de Redis y PostgreSQL (latencia, memoria, conexiones) cuando el despliegue las expone. Si un servicio no está configurado o no es accesible, el panel lo indica de forma explícita — nunca se muestran datos inventados.
+- **Seguridad en tiempo real** — accesos, intentos fallidos, IPs sospechosas y estado de los circuit breakers de IA por proveedor.
+- **Arquitectura de facturación (Stripe)** lista en backend y panel; se activa automáticamente al configurar las claves de producción, sin requerir cambios de código.
+
+### Calidad y fiabilidad
+- **Migración de base de datos validada contra PostgreSQL real** (no solo el entorno de desarrollo SQLite) desplegando el stack completo con Docker Compose. Se encontraron y corrigieron 2 incompatibilidades antes de que llegaran a un entorno de producción.
+- **200 tests en verde** (+10 desde la versión anterior).
+
+---
+
+## v1.1.0 — Junio 2026 · Nueva landing y pulido
 
 ### Landing rediseñada "Light Enterprise"
 - **Nuevo diseño claro y premium** inspirado en Apple, Stripe, Linear, Notion y Vercel — se retira el estilo anterior (mapa neural) por una página de producto elegante, con mucho espacio en blanco y tipografía cuidada.
@@ -14,24 +28,6 @@
 ### Calidad
 - **Auditoría funcional completa** de la aplicación (todas las pantallas verificadas) y aislamiento entre agencias confirmado.
 - **Capturas actualizadas** en toda la documentación, reflejando el estado actual del producto.
-
----
-
-## v1.0.0 — Junio 2026 · PostgreSQL, Alembic y madurez enterprise
-
-### Base de datos enterprise
-- **Migración a PostgreSQL 16** — la plataforma opera sobre PostgreSQL en producción: máxima fiabilidad, transacciones ACID y concurrencia real bajo carga.
-- **Alembic migrations** — las migraciones de esquema son la fuente única de verdad. La base de datos siempre está en el estado correcto al arrancar; no existen divergencias entre entornos.
-- **Suite de tests ampliada** — 159 tests en verde incluyendo validación de migraciones, compatibilidad PostgreSQL real y aislamiento multi-tenant bajo ambos motores.
-
-### Experiencia de producto
-- **Sidebar enterprise** — rediseño completo al estilo HubSpot/ClickUp: grupos con cabeceras, íconos + etiquetas, navegación más rápida y limpia.
-- **Centro IA** — hub central con métricas clickables y acceso directo a todos los módulos de inteligencia artificial.
-- **Feedback integrado** — widget de feedback de usuario disponible en toda la plataforma.
-
-### Rendimiento y fiabilidad
-- **Proxy sin timeout** — las llamadas a IA lentas (anuncios, home staging, vídeo) ya no se cortan. El servidor transmite la respuesta en streaming sin límite de tiempo.
-- **Launcher inteligente** — detecta y reemplaza instancias desactualizadas para evitar el error silencioso de "servidor antiguo sirviendo código viejo".
 
 ---
 
@@ -52,6 +48,24 @@
 
 ### Galería
 - **28 capturas reales** — todas las pantallas regeneradas en modo oscuro enterprise a 1440×900 @2x, incluyendo nuevo generador de anuncios, floorplan, widget y detalle de propiedad.
+
+---
+
+## v1.0.0 — Junio 2026 · PostgreSQL, Alembic y madurez enterprise
+
+### Base de datos enterprise
+- **Migración a PostgreSQL 16** — la plataforma opera sobre PostgreSQL en producción: máxima fiabilidad, transacciones ACID y concurrencia real bajo carga.
+- **Alembic migrations** — las migraciones de esquema son la fuente única de verdad. La base de datos siempre está en el estado correcto al arrancar; no existen divergencias entre entornos.
+- **Suite de tests ampliada** — 159 tests en verde incluyendo validación de migraciones, compatibilidad PostgreSQL real y aislamiento multi-tenant bajo ambos motores.
+
+### Experiencia de producto
+- **Sidebar enterprise** — rediseño completo al estilo HubSpot/ClickUp: grupos con cabeceras, íconos + etiquetas, navegación más rápida y limpia.
+- **Centro IA** — hub central con métricas clickables y acceso directo a todos los módulos de inteligencia artificial.
+- **Feedback integrado** — widget de feedback de usuario disponible en toda la plataforma.
+
+### Rendimiento y fiabilidad
+- **Proxy sin timeout** — las llamadas a IA lentas (anuncios, home staging, vídeo) ya no se cortan. El servidor transmite la respuesta en streaming sin límite de tiempo.
+- **Launcher inteligente** — detecta y reemplaza instancias desactualizadas para evitar el error silencioso de "servidor antiguo sirviendo código viejo".
 
 ---
 
