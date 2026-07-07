@@ -4,6 +4,19 @@
 
 ---
 
+## v1.2.1 — Julio 2026 · Endurecimiento de seguridad y verificación en vivo
+
+### Seguridad reforzada (auditoría de penetración)
+- **Aislamiento entre organizaciones verificado en vivo.** Se levantó el stack completo y se intentó, de forma real, acceder a los datos de una agencia desde otra (identificadores manipulados, lectura, edición y borrado directos). Todos los intentos fueron rechazados: cada organización solo ve y opera sobre sus propios datos.
+- **Protección contra escalada de privilegios.** Se corrigió y se blindó el cambio de rol de cuentas: solo un administrador de la organización puede modificar roles o el estado de una cuenta; ningún usuario puede aumentarse permisos a sí mismo.
+- **Protección anti-abuso robustecida.** Los límites de peticiones (inicio de sesión, IA, formularios) resisten intentos de evasión mediante cabeceras manipuladas, protegiendo frente a fuerza bruta y consumo económico no autorizado.
+- **Subida de imágenes segura.** Validación por firma real del archivo (no solo por extensión), análisis de contenido y nombres de fichero aleatorios, evitando la subida de archivos maliciosos.
+
+### Calidad y verificación
+- **Verificación con evidencias reales:** batería de pruebas ampliada, recorrido automatizado de 22 secciones de la aplicación con navegador real (sin errores), y stack completo (PostgreSQL + Redis + backend + frontend) desplegado con Docker y en estado saludable.
+
+---
+
 ## v1.2.0 — Junio 2026 · Panel Super Admin y validación PostgreSQL real
 
 ### Panel Super Admin — Control Center
