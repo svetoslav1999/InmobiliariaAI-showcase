@@ -4,6 +4,23 @@
 
 ---
 
+## v1.2.2 — Julio 2026 · Fiabilidad del panel de costes, rendimiento y pulido visual
+
+### Fiabilidad del informe de costes de IA
+- **Conversión de costes a euros restaurada y más robusta.** El panel financiero del Super Admin siempre muestra importes reales o, cuando la referencia de cambio no está disponible, lo indica de forma explícita — nunca aparecen euros inventados. Los totales cuadran exactamente con el consumo real registrado.
+
+### Rendimiento
+- **Analytics carga notablemente más rápido.** Las métricas y gráficos aparecen de inmediato; los insights generados por IA se cargan de forma independiente, sin bloquear el resto del panel.
+- **Base de datos optimizada.** Se depuraron índices redundantes, reduciendo el coste de escritura sin afectar a las consultas.
+
+### Experiencia de usuario
+- **Mayor estabilidad visual** en el panel de infraestructura: se eliminan los saltos de maquetación mientras se cargan las métricas en vivo.
+
+### Calidad y verificación
+- **Auditoría de pre-producción con evidencias reales:** recorrido visual automatizado de toda la aplicación (580 combinaciones de página, resolución y tema — sin defectos de maquetación), análisis real de rendimiento de PostgreSQL, verificación en vivo de la generación de IA (Claude y Gemini) y batería de pruebas completa en verde.
+
+---
+
 ## v1.2.1 — Julio 2026 · Endurecimiento de seguridad y verificación en vivo
 
 ### Seguridad reforzada (auditoría de penetración)

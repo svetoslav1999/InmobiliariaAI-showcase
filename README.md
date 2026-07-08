@@ -8,13 +8,13 @@
 
 **CRM inmobiliario premium con IA integrada — captación, gestión, automatización y cierre en una sola plataforma SaaS multi-tenant.**
 
-[![Tests](https://img.shields.io/badge/tests-200%20backend%20%2B%2035%20frontend-brightgreen)](#estado-del-proyecto)
+[![Tests](https://img.shields.io/badge/tests-234%20backend%20%2B%2043%20frontend-brightgreen)](#estado-del-proyecto)
 [![Multi-tenant](https://img.shields.io/badge/multi--tenant-nivel%20ORM-blue)](#seguridad)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Alembic-336791?logo=postgresql&logoColor=white)](#arquitectura)
 [![Redis](https://img.shields.io/badge/Redis-7--alpine-DC382D?logo=redis&logoColor=white)](#arquitectura)
 [![Docker](https://img.shields.io/badge/Docker-Compose%204%20servicios-2496ED?logo=docker&logoColor=white)](#arquitectura)
 [![Security](https://img.shields.io/badge/seguridad-89%2F100-orange)](#seguridad)
-[![Version](https://img.shields.io/badge/version-v1.2.0-purple)](#estado-del-proyecto)
+[![Version](https://img.shields.io/badge/version-v1.2.2-purple)](#estado-del-proyecto)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black)](#tecnologías)
 [![FastAPI](https://img.shields.io/badge/FastAPI-Python%203.12-009688)](#tecnologías)
 [![Claude](https://img.shields.io/badge/IA-Claude%20(Anthropic)-d97757)](#ai-center--11-módulos-de-inteligencia-artificial)
@@ -329,7 +329,7 @@ Informe público: [SHOWCASE_SECURITY_REPORT.md](SHOWCASE_SECURITY_REPORT.md).
 | API | **42 routers · 240+ endpoints** ✅ |
 | Panel Super Admin | **Independiente, cross-tenant, fail-closed** ✅ |
 | Build producción | **verde** ✅ |
-| Versión actual | **v1.2.0** |
+| Versión actual | **v1.2.2** |
 | Distribución | SaaS Web · Docker Compose (4 servicios orquestados) |
 
 ---
@@ -348,7 +348,15 @@ Informe público: [SHOWCASE_SECURITY_REPORT.md](SHOWCASE_SECURITY_REPORT.md).
 
 Roadmap completo y priorizado: [ROADMAP_PUBLIC.md](ROADMAP_PUBLIC.md).
 
-**Entregado recientemente (v1.2.0 — junio 2026)**
+**Entregado recientemente (v1.2.2 — julio 2026)**
+- [x] **Fiabilidad del informe de costes de IA en euros** restaurada y verificada — importes reales o "no disponible", nunca inventados; totales que cuadran con el consumo real
+- [x] **Analytics más rápido** (los datos aparecen de inmediato) y **optimización de base de datos** (índices depurados)
+- [x] **Mayor estabilidad visual** en el panel de infraestructura
+- [x] **Endurecimiento de seguridad verificado en vivo** (v1.2.1) — aislamiento entre organizaciones, anti-escalada de privilegios, anti-abuso y subida de imágenes segura
+- [x] **Auditoría de pre-producción con evidencias** — recorrido visual completo (580 combinaciones), rendimiento PostgreSQL real, IA en vivo (Claude + Gemini) y regresión completa en verde
+- [x] **234 tests backend + 43 frontend en verde**
+
+**Entregado en v1.2.0 (junio 2026)**
 - [x] **Panel Super Admin — Control Center** — administración de la plataforma completa independiente de cualquier agencia: organizaciones, usuarios, consumo de IA, infraestructura en vivo, seguridad, backups, auditoría y mantenimiento
 - [x] **Arquitectura de facturación (Stripe)** — planes, suscripciones, MRR/ARR y webhooks listos en backend y panel; queda dormida y se activa sola al configurar las claves, sin tocar código
 - [x] **Migración 0003 validada contra PostgreSQL real** vía Docker Compose (no solo SQLite) — encontrados y corregidos 2 bugs de compatibilidad antes de llegar a producción
