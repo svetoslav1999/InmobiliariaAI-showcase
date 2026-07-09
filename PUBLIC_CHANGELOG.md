@@ -4,6 +4,22 @@
 
 ---
 
+## v1.3.0 — Julio 2026 · CRM Avanzado (Fase 1)
+
+### Historial 360º del cliente
+- **Timeline unificado real.** La ficha de cada cliente reúne ahora *toda* la actividad en una única línea temporal: llamadas, WhatsApp (enviados y recibidos), mensajes de conversación, visitas, tareas y acciones de IA. Antes parte de esta actividad no quedaba registrada; ahora el historial está completo y se puede filtrar por categoría (Comunicación, Visitas, Tareas, IA).
+- **Registro de llamadas.** Un botón en la ficha permite anotar cada llamada con su resultado (contactado, no contesta, buzón, comunica, no interesado, reagendar, número erróneo), duración y notas. La llamada actualiza automáticamente la fecha de último contacto y aparece en el timeline.
+
+### Inteligencia comercial
+- **Próxima acción recomendada por IA.** Con un clic, el sistema analiza el estado real del lead y recomienda la mejor acción comercial, con un indicador de urgencia (alta / media / baja) calculado a partir del último contacto, el seguimiento pendiente y la etapa del embudo. La acción se puede convertir en una tarea de seguimiento al instante.
+- **Seguimiento automático.** Cuando vence la fecha de próximo contacto de un lead, se genera automáticamente una tarea de seguimiento asignada a su agente, sin duplicados.
+
+### Calidad y verificación
+- **Sin datos inventados y sin romper nada existente.** Todo se apoya en la arquitectura actual; el aislamiento entre agencias se mantiene verificado (intentar registrar actividad sobre un cliente de otra organización se rechaza).
+- **Verificación con evidencias reales:** batería de pruebas ampliada (240 en verde), tipado y linters limpios, compilación de producción correcta, y recorrido funcional automatizado del CRM con navegador real — **cero errores de consola, red o pantallas en blanco**, en tema claro y oscuro.
+
+---
+
 ## v1.2.2 — Julio 2026 · Fiabilidad del panel de costes, rendimiento y pulido visual
 
 ### Fiabilidad del informe de costes de IA
