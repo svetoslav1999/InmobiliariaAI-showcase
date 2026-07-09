@@ -4,6 +4,27 @@
 
 ---
 
+## v1.4.0 — Julio 2026 · Módulo de Facturación
+
+### Facturas y presupuestos profesionales
+- **Facturas completas**: creación, edición, duplicado, anulación, emisión con **numeración automática por serie y año**, IVA configurable por línea, descuentos, vencimientos y **PDF profesional** listo para enviar.
+- **Presupuestos**: creación, envío, aceptación/rechazo y **conversión a factura en un clic**, con su propio PDF.
+- **Pagos**: registro de cobros parciales o completos (transferencia, tarjeta, efectivo, domiciliación…); el estado de la factura se actualiza solo (pendiente, parcial, pagada, vencida).
+
+### Panel financiero real
+- Ingresos del mes y del año, pendiente de cobro, importes vencidos, IVA repercutido y facturación emitida, con **gráfico de evolución de cobros** a 12 meses. Solo datos reales; cuando no hay datos, se indica de forma honesta.
+
+### Preparado para crecer
+- **Configuración fiscal por agencia**: identidad fiscal, país, moneda, tipos de IVA y series propias — pensado para escalar como SaaS multi-país.
+- **Exportación** a CSV y Excel.
+- Integración con **Stripe** (muestra "no configurado" de forma honesta si falta la clave) y arquitectura **preparada para VeriFactu, factura electrónica y SII**, sin activar integraciones falsas.
+
+### Seguridad y calidad
+- **Permisos por rol** (administrador, agente, solo lectura) y **aislamiento estricto entre agencias** verificado: ninguna organización puede ver ni tocar facturas de otra.
+- **Verificación con evidencias reales**: batería de pruebas ampliada (247 en verde), tipado y linters limpios, compilación de producción correcta y recorrido funcional automatizado del módulo con navegador real — **cero errores de consola, red o pantallas en blanco**, en tema claro y oscuro.
+
+---
+
 ## v1.3.0 — Julio 2026 · CRM Avanzado (Fase 1)
 
 ### Historial 360º del cliente
