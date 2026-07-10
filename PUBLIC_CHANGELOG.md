@@ -4,6 +4,24 @@
 
 ---
 
+## v1.4.1 — Julio 2026 · Panel financiero premium
+
+### Un panel financiero de nivel comercial
+- **KPIs grandes y claros**: cobrado y facturado del mes con **comparación respecto al mes anterior** (tendencia ↑/↓) y **mini-gráficos de evolución**, más facturado anual, pendiente de cobro, IVA repercutido y base cobrada.
+- **Varios gráficos con datos reales**: facturado vs. cobrado a 12 meses, estado de las facturas, embudo de presupuestos con tasa de conversión, métodos de pago y rankings de clientes, propiedades y agentes que más facturan.
+- **Widgets útiles de un vistazo**: próximos vencimientos, últimos pagos, clientes con deuda, presupuestos pendientes, últimas facturas y **alertas automáticas**.
+- **Estados vacíos honestos**: cuando aún no hay datos, el panel lo indica e invita a crear la primera factura, en lugar de mostrar cifras inventadas.
+
+### Cuidado en el detalle
+- Tarjetas con profundidad, microinteracciones y jerarquía visual más clara; tablas con esqueletos de carga, estados vacíos con acción directa y realce de importes vencidos.
+- Coherencia visual total con el resto del producto, en tema claro y oscuro.
+
+### Verificación con evidencias reales
+- Suite completa en verde (256 pruebas de backend, 43 de frontend), tipado y linters limpios, compilación de producción correcta y **stack Docker completo (frontend, backend, PostgreSQL y Redis) sano**.
+- Recorrido funcional automatizado con navegador real sobre toda la aplicación: **cero errores de consola, de red o pantallas en blanco**.
+
+---
+
 ## v1.4.0 — Julio 2026 · Módulo de Facturación
 
 ### Facturas y presupuestos profesionales
