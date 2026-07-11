@@ -4,6 +4,31 @@
 
 ---
 
+## v1.4.2 — Julio 2026 · Endurecimiento de seguridad y fiabilidad
+
+Una revisión completa de la configuración con la que InmobilarIA se despliega en producción.
+No cambia lo que ves en pantalla: cambia lo bien protegido que está lo que hay detrás.
+
+### Protección de las cuentas
+- **Protección antifuerza bruta por usuario real**: los límites de intentos de acceso se aplican
+  ahora por cliente concreto, de modo que la actividad de un visitante nunca puede afectar a la
+  capacidad de entrar de otra agencia.
+- **HTTPS obligatorio** (HSTS) y cookies de sesión endurecidas.
+- **Sin contraseñas por defecto**: una instalación nueva genera credenciales fuertes y aleatorias;
+  el sistema se niega a arrancar con secretos débiles o sin configurar.
+
+### Privacidad de los datos
+- Los registros del servidor dejan de poder contener datos personales de clientes.
+- La base de datos y la caché quedan aisladas de la red pública y protegidas con autenticación.
+
+### Fiabilidad
+- **Copias de seguridad garantizadas**: la copia diaria automática ya no puede saltarse en
+  silencio si el sistema está ocupado, y se ejecuta en horario local español.
+- Vigilancia de estado del servicio y reinicio automático ante fallos.
+- Versiones de dependencias fijadas: cada despliegue es exactamente el que se ha probado.
+
+---
+
 ## v1.4.1 — Julio 2026 · Panel financiero premium
 
 ### Un panel financiero de nivel comercial
