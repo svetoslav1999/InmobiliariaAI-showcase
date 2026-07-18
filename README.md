@@ -1,20 +1,21 @@
 <div align="center">
 
-<img src="assets/icon.png" alt="InmobilarIA" width="120" />
+<img src="assets/icon.png" alt="InmobiliarIA" width="120" />
 
-# 🏠 InmobilarIA
+# 🏠 InmobiliarIA
 
 ### El sistema operativo inteligente para inmobiliarias modernas
 
 **CRM inmobiliario premium con IA integrada — captación, gestión, automatización y cierre en una sola plataforma SaaS multi-tenant.**
 
-[![Tests](https://img.shields.io/badge/tests-234%20backend%20%2B%2043%20frontend-brightgreen)](#estado-del-proyecto)
+[![Tests](https://img.shields.io/badge/tests-313%20backend%20%2B%2043%20frontend-brightgreen)](#estado-del-proyecto)
 [![Multi-tenant](https://img.shields.io/badge/multi--tenant-nivel%20ORM-blue)](#seguridad)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Alembic-336791?logo=postgresql&logoColor=white)](#arquitectura)
 [![Redis](https://img.shields.io/badge/Redis-7--alpine-DC382D?logo=redis&logoColor=white)](#arquitectura)
 [![Docker](https://img.shields.io/badge/Docker-Compose%204%20servicios-2496ED?logo=docker&logoColor=white)](#arquitectura)
 [![Security](https://img.shields.io/badge/seguridad-89%2F100-orange)](#seguridad)
-[![Version](https://img.shields.io/badge/version-v1.2.2-purple)](#estado-del-proyecto)
+[![Version](https://img.shields.io/badge/version-v1.5.0-purple)](#estado-del-proyecto)
+[![Email](https://img.shields.io/badge/email-Resend%20%C2%B7%20SendGrid%20%C2%B7%20SMTP-0F172A)](#email-marketing)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black)](#tecnologías)
 [![FastAPI](https://img.shields.io/badge/FastAPI-Python%203.12-009688)](#tecnologías)
 [![Claude](https://img.shields.io/badge/IA-Claude%20(Anthropic)-d97757)](#ai-center--11-módulos-de-inteligencia-artificial)
@@ -34,7 +35,7 @@
 
 ### ✨ Landing premium — SaaS Web
 
-![InmobilarIA — landing](screenshots/landing-hero.png)
+![InmobiliarIA — landing](screenshots/landing-hero.png)
 
 *Nueva landing "Light Enterprise" — clara, elegante y centrada en el producto (inspiración Apple · Stripe · Linear · Notion · Vercel).*
 
@@ -48,10 +49,11 @@
 
 ## Tabla de contenidos
 
-- [¿Qué es InmobilarIA?](#qué-es-inmobilaria)
+- [¿Qué es InmobiliarIA?](#qué-es-inmobiliaria)
 - [El problema que resuelve](#el-problema-que-resuelve)
 - [Características](#características)
 - [AI Center — 11 módulos de IA](#ai-center--11-módulos-de-inteligencia-artificial)
+- [Email Marketing](#email-marketing)
 - [Panel Super Admin — Control Center](#panel-super-admin--control-center)
 - [Galería de capturas](#galería-de-capturas)
 - [Tecnologías](#tecnologías)
@@ -66,9 +68,9 @@
 
 ---
 
-## ¿Qué es InmobilarIA?
+## ¿Qué es InmobiliarIA?
 
-**InmobilarIA** es una plataforma inmobiliaria SaaS premium que convierte la operativa diaria de una agencia en un flujo inteligente y automatizado. No es un CRM más: es un **sistema operativo inmobiliario** que integra inteligencia artificial en cada etapa del negocio, desde la captación del lead hasta la firma del contrato.
+**InmobiliarIA** es una plataforma inmobiliaria SaaS premium que convierte la operativa diaria de una agencia en un flujo inteligente y automatizado. No es un CRM más: es un **sistema operativo inmobiliario** que integra inteligencia artificial en cada etapa del negocio, desde la captación del lead hasta la firma del contrato.
 
 Construida como producto **multi-tenant sobre PostgreSQL**, cada agencia opera en un espacio totalmente aislado —datos, usuarios, branding y configuración propios— con migraciones de esquema gestionadas por Alembic para garantizar consistencia en producción.
 
@@ -76,7 +78,7 @@ Construida como producto **multi-tenant sobre PostgreSQL**, cada agencia opera e
 
 ## El problema que resuelve
 
-Las agencias inmobiliarias pierden operaciones por fricción operativa: leads sin seguir, tareas manuales repetitivas, contenido lento de producir y datos dispersos en hojas de cálculo y chats. InmobilarIA centraliza captación, CRM, contenido y cierre en una sola plataforma, y delega en IA el trabajo repetitivo para que el equipo comercial dedique su tiempo a vender.
+Las agencias inmobiliarias pierden operaciones por fricción operativa: leads sin seguir, tareas manuales repetitivas, contenido lento de producir y datos dispersos en hojas de cálculo y chats. InmobiliarIA centraliza captación, CRM, contenido y cierre en una sola plataforma, y delega en IA el trabajo repetitivo para que el equipo comercial dedique su tiempo a vender.
 
 **Beneficios clave:**
 - **Más cierres, menos fricción** — pipeline visual con priorización por IA
@@ -102,6 +104,8 @@ Las agencias inmobiliarias pierden operaciones por fricción operativa: leads si
 | **Analytics IA** | KPIs en tiempo real, funnel de ventas, evolución mensual de leads, rendimiento por agente e insights generados por IA. |
 | **Automatizaciones** | Reglas por evento (triggers + actions) para nutrir leads sin intervención manual, con plantillas predefinidas. |
 | **Calculadoras financieras** | Hipoteca, gastos de compra, rentabilidad, **capacidad de compra** y **rentabilidad avanzada** (ROI, cash flow, análisis de inversión), exportables a PDF/CSV. |
+| **Email Marketing** | Campañas segmentadas, programadas y recurrentes, con plantillas, redacción IA, exclusiones y métricas de entrega — ver sección dedicada [más abajo](#email-marketing). |
+| **Facturación** | Facturas, presupuestos y pagos de la agencia a sus clientes: numeración por serie y ejercicio, IVA desglosado por línea, panel financiero con KPIs reales y export PDF/Excel. Preparado para VeriFactu y SII, sin activar. |
 | **Multi-tenant SaaS** | Aislamiento total entre agencias a nivel de ORM — sin lógica adicional por pantalla. |
 | **Panel Super Admin** | Centro de control de la plataforma completa, independiente de cualquier agencia — ver sección dedicada [más abajo](#panel-super-admin--control-center). |
 
@@ -113,7 +117,7 @@ Las agencias inmobiliarias pierden operaciones por fricción operativa: leads si
 |---|---|
 | 🤖 Asistente IA | Chat comercial con herramientas (buscar propiedades, agendar visitas, crear tareas) |
 | 📊 Lead Scoring | Score 0-100 por lead, historial y panel de top leads |
-| 📝 Anuncios IA | **12 portales AI** (Idealista, Fotocasa, Instagram, Facebook, TikTok, Inversores, AirBnB, Lujo, Familias, Habitaclia, Pisos.com, Kyero EN) + Email Marketing (4 plantillas) + WhatsApp Marketing (5 mensajes) + Campaña Completa |
+| 📝 Anuncios IA | **12 portales AI** (Idealista, Fotocasa, Instagram, Facebook, TikTok, Inversores, AirBnB, Lujo, Familias, Habitaclia, Pisos.com, Kyero EN) + copy de email (4 plantillas) + WhatsApp Marketing (5 mensajes) + Campaña Completa. Genera el texto para copiar; el envío de campañas vive en el módulo [Email Marketing](#email-marketing) |
 | 🏠 Home Staging | Transformación visual de estancias vacías para foto profesional |
 | 🎬 Video Studio | Composición automática de imágenes + música → vídeo MP4 |
 | 🔍 Búsqueda Visual | Buscar propiedades similares por imagen |
@@ -122,6 +126,45 @@ Las agencias inmobiliarias pierden operaciones por fricción operativa: leads si
 | 🧠 AI Memory | Contexto persistente del cliente en todas las conversaciones |
 | ⚡ Automations | Workflows disparados por eventos con acciones IA |
 | 📈 AI Metering | Control de gasto en tokens por usuario y modelo |
+
+---
+
+## Email Marketing
+
+Campañas de email a la cartera de clientes, con segmentación, automatización y métricas
+reales de entrega.
+
+| Resumen y métricas | Campañas |
+|---|---|
+| ![Email Marketing](screenshots/email-marketing.png) | ![Campañas](screenshots/email-campaigns.png) |
+
+| Nueva campaña y segmentación | Plantillas |
+|---|---|
+| ![Nueva campaña](screenshots/email-campaign-new.png) | ![Plantillas](screenshots/email-templates.png) |
+
+**Qué incluye:**
+- **Segmentación** sobre datos reales del CRM: etiquetas, etapa del pipeline, puntuación
+  del lead, ciudad, agente asignado, tipo de cliente y días sin actividad.
+- **Programación y recurrencia** — envío inmediato, en una fecha concreta, o repetido a
+  diario, semanalmente o cada mes. Una campaña interrumpida se reanuda sin volver a
+  escribir a quien ya recibió el correo.
+- **Plantillas** reutilizables con variables (cliente, agente, inmueble, precio, empresa,
+  fecha) y redacción asistida por IA: asunto, cuerpo, reescritura, resumen, mejora de la
+  tasa de apertura y llamada a la acción.
+- **Métricas de entrega** — enviados, entregados, aperturas, clics, rebotes y bajas, con
+  CTR y tasa de apertura, exportables a CSV, Excel y PDF.
+- **Bajas y exclusiones** — baja en un clic con las cabeceras que Gmail y Yahoo exigen a un
+  remitente masivo. La lista de exclusiones se respeta en todos los envíos, incluidos los
+  automáticos, y los rebotes del proveedor entran solos.
+- **Automatizaciones** — el envío se puede disparar por eventos del CRM (nuevo lead,
+  presupuesto enviado, inmueble vendido, cumpleaños, cliente inactivo).
+
+> **Requiere una cuenta de envío propia** (Resend, SendGrid o SMTP). Sin configurarla se
+> puede crear, segmentar y previsualizar, pero el envío queda deshabilitado y la interfaz
+> lo dice — como se ve en la captura. El sistema nunca da por enviado un correo que no
+> salió, ni muestra un 0 donde en realidad no hay dato: si falta la URL pública que
+> construye los enlaces de seguimiento, las aperturas y los clics aparecen como
+> "No disponible".
 
 ---
 
@@ -144,7 +187,7 @@ Plataforma de administración independiente de cualquier agencia: un Super Admin
 - **Seguridad** — accesos, intentos fallidos, IPs sospechosas y estado de los circuit breakers de IA por proveedor, en tiempo real.
 - **Backups** — crear, verificar, descargar y restaurar copias de seguridad desde la interfaz.
 - **Auditoría, logs, alertas y mantenimiento** — trazabilidad completa de la actividad de plataforma.
-- **Facturación (Stripe)** — arquitectura de suscripciones lista (planes, MRR/ARR, webhooks); se activa automáticamente al configurar las claves, sin cambios de código.
+- **Suscripciones (Stripe)** — **pendiente de activación**: la arquitectura está lista en backend y panel (planes, MRR/ARR, webhooks con firma verificada) y se enciende al configurar las claves, sin cambios de código, pero no se ha procesado ningún cobro real. No confundir con el módulo de **Facturación**, que sí está operativo y factura de la agencia a sus clientes.
 
 > Por diseño, el panel administra la **aplicación**, no el host: la monitorización de servidor (CPU/RAM de la VPS) se delega en herramientas externas (Grafana, Prometheus, Uptime Kuma), no en acceso directo al daemon de Docker — evita dar al backend privilegios de facto sobre la máquina.
 
@@ -152,7 +195,7 @@ Plataforma de administración independiente de cualquier agencia: un Super Admin
 
 ## Galería de capturas
 
-> Capturas **reales** de la aplicación en su estado actual (junio 2026) con **datos de demostración** (sin información personal real). Modo oscuro enterprise. Resolución 1440×900 @2x.
+> Capturas **reales** de la aplicación en su estado actual (julio 2026) con **datos de demostración** (sin información personal real). Resolución 1440×900 @2x.
 
 ### Panel, analítica y pipeline
 
@@ -216,6 +259,14 @@ Plataforma de administración independiente de cualquier agencia: un Super Admin
 |---|---|
 | ![Automatizaciones](screenshots/automation.png) | ![WhatsApp Business](screenshots/whatsapp.png) |
 
+| Email Marketing | Campañas de email |
+|---|---|
+| ![Email Marketing](screenshots/email-marketing.png) | ![Campañas](screenshots/email-campaigns.png) |
+
+| Facturación — panel financiero | Facturas |
+|---|---|
+| ![Panel financiero](screenshots/billing-financial-panel.png) | ![Facturas](screenshots/billing-invoices.png) |
+
 | Contratos PDF | Calculadoras financieras |
 |---|---|
 | ![Contratos](screenshots/contracts.png) | ![Calculadoras](screenshots/calculators.png) |
@@ -248,11 +299,13 @@ Una pila moderna, async y type-safe de extremo a extremo. *(El detalle de versio
 
 **Frontend** — Next.js 16 (App Router · RSC · Turbopack) · React 19 · TypeScript (strict) · Tailwind CSS · Framer Motion · React-Three-Fiber / Three.js (3D, tour 360°) · Leaflet (mapas) · Recharts (analítica).
 
-**Backend** — FastAPI (42 routers · 240+ endpoints, incluyendo el panel Super Admin independiente) · Python 3.12 · SQLAlchemy 2 async con hook de aislamiento multi-tenant · Alembic · Pydantic v2 · JWT + bcrypt.
+**Backend** — FastAPI (74 routers · 240+ endpoints, incluyendo el panel Super Admin independiente) · Python 3.12 · SQLAlchemy 2 async con hook de aislamiento multi-tenant · Alembic · Pydantic v2 · JWT + bcrypt · APScheduler (recordatorios, campañas programadas y automatizaciones).
 
 **IA** — Claude de Anthropic (Haiku / Sonnet / Opus) con *metering* de tokens por usuario y modelo; visión para staging, tasación y búsqueda visual. **Circuit breaker económico**: presupuestos configurables por organización/usuario/proveedor/modelo con contadores Redis atómicos.
 
 **Datos e infra** — SQLite en desarrollo · PostgreSQL en producción · Redis 7 (rate-limiting distribuido, cache IA, budget counters) · Docker Compose con healthchecks · generación de PDF · FFmpeg embebido para Video Studio.
+
+**Email** — Resend, SendGrid o SMTP mediante un adaptador con selección automática. Sin credenciales el módulo no envía y lo declara en pantalla; los webhooks de rebote se aceptan solo con la firma del proveedor verificada (Svix HMAC-SHA256 en Resend, ECDSA P-256 en SendGrid).
 
 ---
 
@@ -319,17 +372,19 @@ Informe público: [SHOWCASE_SECURITY_REPORT.md](SHOWCASE_SECURITY_REPORT.md).
 
 | Métrica | Estado |
 |---|---|
-| Tests backend | **200 passing** ✅ |
-| Tests frontend | **35 passing** ✅ |
+| Tests backend | **313 passing** ✅ |
+| Tests frontend | **43 passing** ✅ |
 | TypeScript errors | **0** ✅ |
 | Multi-tenant | **Sí, nivel ORM** ✅ |
 | Base de datos producción | **PostgreSQL 16** ✅ |
 | Migraciones | **Alembic — fuente única de verdad, validada contra PostgreSQL real** ✅ |
 | Seguridad | **14 rondas auditada** ✅ |
-| API | **42 routers · 240+ endpoints** ✅ |
+| API | **74 routers · 240+ endpoints** ✅ |
 | Panel Super Admin | **Independiente, cross-tenant, fail-closed** ✅ |
 | Build producción | **verde** ✅ |
-| Versión actual | **v1.2.2** |
+| Envío de email | **Implementado** — requiere cuenta propia de Resend/SendGrid/SMTP |
+| Suscripciones Stripe | **Pendiente de activación** — arquitectura lista, sin cobros reales |
+| Versión actual | **v1.5.0** |
 | Distribución | SaaS Web · Docker Compose (4 servicios orquestados) |
 
 ---
@@ -348,7 +403,14 @@ Informe público: [SHOWCASE_SECURITY_REPORT.md](SHOWCASE_SECURITY_REPORT.md).
 
 Roadmap completo y priorizado: [ROADMAP_PUBLIC.md](ROADMAP_PUBLIC.md).
 
-**Entregado recientemente (v1.2.2 — julio 2026)**
+**Entregado recientemente (v1.5.0 — julio 2026)**
+- [x] **Email Marketing** — campañas segmentadas, programadas y recurrentes; plantillas con variables; redacción asistida por IA; bajas y exclusiones respetadas en todos los envíos; métricas reales de entrega exportables. Requiere cuenta propia de Resend, SendGrid o SMTP
+- [x] **Rebotes y quejas incorporados automáticamente** a la lista de exclusiones, aceptando solo eventos con la firma del proveedor verificada
+- [x] **Facturación** — facturas, presupuestos y pagos con numeración por serie y ejercicio, IVA desglosado por línea, panel financiero y export PDF/Excel
+- [x] **Interfaz unificada** — todas las pantallas comparten cabecera y componentes, eliminando las diferencias que se habían acumulado entre módulos
+- [x] **313 tests backend + 43 frontend en verde**
+
+**Entregado en v1.2.2 (julio 2026)**
 - [x] **Fiabilidad del informe de costes de IA en euros** restaurada y verificada — importes reales o "no disponible", nunca inventados; totales que cuadran con el consumo real
 - [x] **Analytics más rápido** (los datos aparecen de inmediato) y **optimización de base de datos** (índices depurados)
 - [x] **Mayor estabilidad visual** en el panel de infraestructura
@@ -378,7 +440,7 @@ Roadmap completo y priorizado: [ROADMAP_PUBLIC.md](ROADMAP_PUBLIC.md).
 **Próximos pasos**
 - [ ] Matching UI (coincidencias cliente-propiedad)
 - [ ] Contratos avanzados (ofertas, firma digital)
-- [ ] Emails automáticos de visitas
+- [ ] Verificación de entregabilidad sobre un dominio propio (SPF/DKIM/DMARC) y campaña real de extremo a extremo
 - [ ] Activación de Stripe en producción (claves live + plan de precios público)
 - [ ] App móvil nativa
 - [ ] API pública para integraciones de terceros
@@ -421,12 +483,12 @@ Recorrido visual del producto: **[Demo en vivo](https://svetoslav1999.github.io/
 
 ## Licencia
 
-Producto propietario. El código fuente es **privado** y no se distribuye. Este repositorio (textos, capturas y documentación de presentación) © InmobilarIA 2026 — todos los derechos reservados.
+Producto propietario. El código fuente es **privado** y no se distribuye. Este repositorio (textos, capturas y documentación de presentación) © InmobiliarIA 2026 — todos los derechos reservados.
 
 ---
 
 <div align="center">
 
-© InmobilarIA 2026 · Hecho con FastAPI, Next.js y Claude
+© InmobiliarIA 2026 · Hecho con FastAPI, Next.js y Claude
 
 </div>

@@ -25,6 +25,30 @@ Descripción funcional orientada a producto. Sin detalles de implementación.
 - Campañas y panel de conversaciones.
 - Tasación visual, búsqueda visual y generador de anuncios.
 
+## 📧 Email Marketing
+- Campañas a segmentos de la cartera: por etiquetas, etapa del pipeline, puntuación del
+  lead, ciudad, agente, tipo de cliente o días sin actividad.
+- Envío inmediato, programado o recurrente (diario, semanal, mensual).
+- Plantillas reutilizables con variables (cliente, agente, inmueble, precio, empresa, fecha).
+- Redacción asistida por IA: asunto, cuerpo, reescritura, resumen, mejora de la tasa de
+  apertura y llamada a la acción.
+- Métricas por campaña: enviados, entregados, aperturas, clics, rebotes y bajas, con
+  exportación a CSV, Excel y PDF.
+- Bajas en un clic y lista de exclusiones que se respeta en **todos** los envíos,
+  incluidos los automáticos.
+- Los rebotes y las quejas del proveedor se incorporan solos a las exclusiones.
+- **Requiere una cuenta de envío propia** (Resend, SendGrid o SMTP). Sin configurarla el
+  módulo permite crear, segmentar y previsualizar, pero el envío queda deshabilitado y así
+  se indica en pantalla: nunca da por enviado algo que no salió.
+
+## 🧾 Facturación
+- Facturas, presupuestos y pagos de la agencia a sus clientes.
+- Numeración por serie y ejercicio, sin huecos ni duplicados.
+- IVA por línea con desglose por tipo impositivo, y ajustes fiscales por agencia.
+- Panel financiero con KPIs reales, comparativa mes a mes y estado de cobro.
+- Exportación a PDF y Excel, y registro de auditoría por documento.
+- Preparado para VeriFactu y SII; la conexión con la Agencia Tributaria no está activada.
+
 ## 🎬 Estudio de contenido IA
 - Home staging: amueblado virtual de estancias vacías.
 - Video Studio.

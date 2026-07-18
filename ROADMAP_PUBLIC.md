@@ -1,4 +1,4 @@
-# InmobilarIA — Roadmap Público
+# InmobiliarIA — Roadmap Público
 
 > Última actualización: junio 2026 · v1.2.0
 
@@ -46,16 +46,23 @@ El producto está en **estado de producción técnica**: backend estable sobre P
 
 ---
 
-### 3. Emails automáticos de visitas — alta prioridad
+### 3. Entregabilidad del correo sobre dominio propio — alta prioridad
 
-**Qué:**
-- Confirmación de visita (24 horas antes)
-- Recordatorio por WhatsApp (2 horas antes, si el contacto tiene WhatsApp)
-- Follow-up automático (2 horas después de la visita)
+**Entregado en v1.5.0:** el módulo de Email Marketing (campañas segmentadas, programadas y
+recurrentes, plantillas, exclusiones y métricas de entrega) y los correos automáticos de
+visita — confirmación, recordatorio 24 h antes y follow-up posterior — están implementados y
+conectados al planificador.
 
-**Por qué:** la infraestructura de email (Resend) y los campos de control (`confirmation_sent`, `reminder_sent`, `followup_sent`) ya están implementados. Solo falta activar el scheduler.
+**Qué falta:** ejercitarlo contra un dominio real. Configurar SPF, DKIM y DMARC en el
+dominio de la agencia, verificarlo en el proveedor y hacer una campaña completa de extremo a
+extremo. Hasta entonces el comportamiento está validado con eventos de proveedor, no con
+envío masivo real.
 
-**Impacto directo:** reducción de no-shows estimada en 20-30%.
+**Por qué:** un remitente sin autenticar acaba en spam por muy bien construido que esté el
+mensaje. La entregabilidad se demuestra enviando, no programando.
+
+**Impacto directo:** reducción de no-shows estimada en 20-30% una vez el correo llega de
+forma fiable.
 
 ---
 

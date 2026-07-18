@@ -1,12 +1,66 @@
-# InmobilarIA — Historial de cambios público
+# InmobiliarIA — Historial de cambios público
 
 > Este changelog describe mejoras del producto visibles para clientes y usuarios. No incluye detalles de implementación técnica interna.
 
 ---
 
+## v1.5.0 — Julio 2026 · Email Marketing
+
+Las agencias ya podían hablar con sus clientes por WhatsApp y por el chat. Faltaba el canal
+que sigue moviendo el sector: el correo. Este módulo lo cubre de principio a fin, desde
+elegir a quién escribir hasta saber quién lo abrió.
+
+### Campañas
+- **Segmentación con los datos que ya están en el CRM**: etiquetas, etapa del pipeline,
+  puntuación del lead, ciudad, agente asignado, tipo de cliente o días sin contacto. No hay
+  que mantener listas aparte.
+- **Envío inmediato, programado o recurrente** (diario, semanal o mensual).
+- **Una campaña interrumpida se reanuda sola** y no vuelve a escribir a quien ya recibió el
+  correo — un corte de luz a mitad de envío no duplica nada.
+- **Plantillas reutilizables** con variables (cliente, agente, inmueble, precio, empresa,
+  fecha) para personalizar sin reescribir.
+- **Redacción asistida por IA**: asunto, cuerpo, reescritura, resumen, mejora de la tasa de
+  apertura y llamada a la acción.
+
+### Saber qué pasó con cada correo
+- **Métricas por campaña**: enviados, entregados, aperturas, clics, rebotes y bajas, con CTR
+  y tasa de apertura. Exportables a CSV, Excel y PDF.
+- **Entregado y enviado son cosas distintas.** Que el proveedor acepte un correo no
+  significa que llegara al buzón. Se miden por separado, porque solo la segunda cifra
+  responde a "¿ha llegado?".
+- **Nunca se muestra un cero que en realidad significa "no lo sé".** Si falta la
+  configuración que permite medir aperturas y clics, esas casillas dicen "No disponible".
+
+### Reputación de envío
+- **Baja en un clic**, con las cabeceras que Gmail y Yahoo exigen a cualquier remitente
+  masivo. Ponérselo difícil a quien quiere salir es la vía rápida a la carpeta de spam.
+- **Lista de exclusiones respetada en todos los envíos**, incluidos los automáticos.
+- **Los rebotes y las quejas entran solos** en esa lista, y únicamente si vienen firmados por
+  el proveedor: aceptar avisos sin verificar permitiría a cualquiera vaciar la lista de una
+  agencia.
+
+### Envío por eventos
+- Un correo puede dispararse solo cuando entra un lead, se envía un presupuesto, se vende un
+  inmueble, es el cumpleaños de un cliente o alguien lleva demasiado tiempo sin contacto.
+
+> **El envío requiere una cuenta propia** (Resend, SendGrid o SMTP). Sin configurarla se
+> puede crear, segmentar y previsualizar, pero el envío está deshabilitado y la aplicación lo
+> dice claramente. En ningún caso se da por enviado un correo que no salió.
+
+### Además
+- **Facturación** — facturas, presupuestos y pagos de la agencia a sus clientes, con
+  numeración por serie y ejercicio, IVA desglosado por línea, panel financiero con KPIs
+  reales y exportación a PDF y Excel.
+- **Interfaz unificada** — todas las pantallas comparten ahora la misma cabecera y los
+  mismos componentes, corrigiendo las diferencias que se habían ido acumulando entre módulos.
+- **313 pruebas de backend y 43 de frontend en verde**, con tipado, linters y compilación de
+  producción limpios.
+
+---
+
 ## v1.4.2 — Julio 2026 · Endurecimiento de seguridad y fiabilidad
 
-Una revisión completa de la configuración con la que InmobilarIA se despliega en producción.
+Una revisión completa de la configuración con la que InmobiliarIA se despliega en producción.
 No cambia lo que ves en pantalla: cambia lo bien protegido que está lo que hay detrás.
 
 ### Protección de las cuentas

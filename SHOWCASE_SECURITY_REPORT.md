@@ -1,4 +1,4 @@
-# 🔐 Informe de seguridad del showcase — InmobilarIA
+# 🔐 Informe de seguridad del showcase — InmobiliarIA
 
 **Fecha:** 2026-06-02
 **Repositorio de origen:** privado
