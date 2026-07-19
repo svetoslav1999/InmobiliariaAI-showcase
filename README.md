@@ -241,9 +241,9 @@ Plataforma de administración independiente de cualquier agencia: un Super Admin
 |---|---|
 | ![Generador de anuncios](screenshots/ads-generator.png) | ![Floorplan IA](screenshots/floorplan.png) |
 
-| Email Marketing IA | WhatsApp Marketing IA |
+| Email Marketing IA | Listas de exclusión |
 |---|---|
-| ![Email Marketing](screenshots/email-marketing.png) | ![WhatsApp Marketing](screenshots/whatsapp-marketing.png) |
+| ![Email Marketing](screenshots/email-marketing.png) | ![Listas de exclusión](screenshots/email-suppressions.png) |
 
 | Home Staging IA | Tasación visual IA |
 |---|---|
